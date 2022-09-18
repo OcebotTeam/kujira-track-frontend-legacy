@@ -46,24 +46,25 @@ function Pair(ticker_id) {
   };
 
   /**
-   * Returns
+   * Returns candle raw values from de API given a precision period
    * @param precision
    * @returns {Promise<any>}
    */
   this.candlesRawValues = (precision) => {
-    const endDate = new Date();
-    const startDate = new Date();
+    const fromDate = new Date();
+    const toDate = new Date();
+    toDate.setMinutes(toDate.getMinutes() + 1);
 
     // TODO: add "period" param to replace hardcoded switch.
     switch (precision) {
       case TickPrecision.day1:
-        startDate.setMonth(startDate.getMonth() - 6);
+        fromDate.setMonth(fromDate.getMonth() - 6);
         break;
       case TickPrecision.month1:
-        startDate.setFullYear(startDate.getFullYear() - 6);
+        fromDate.setFullYear(fromDate.getFullYear() - 6);
         break;
       default:
-        startDate.setMinutes(startDate.getMinutes() - precision * 100);
+        fromDate.setMinutes(fromDate.getMinutes() - precision * 1000);
     }
 
     let endpoint =
@@ -73,9 +74,9 @@ function Pair(ticker_id) {
       "&precision=" +
       precision +
       "&from=" +
-      dateToApiFormat(startDate) +
+      dateToApiFormat(fromDate) +
       "&to=" +
-      dateToApiFormat(endDate);
+      dateToApiFormat(toDate);
 
     return fetch(endpoint)
       .then((response) => response.json())
@@ -83,31 +84,21 @@ function Pair(ticker_id) {
       .catch((error) => console.log(error));
   };
 
-  this.candlesBarChartValues = (precision) =>
+  this.candlesChartValues = (precision) =>
     this.candlesRawValues(precision).then((candles) => {
-      // Pointer to last candle.
-      let lastCandle = null;
 
-      candles.forEach((candle, index) => {
-        // Apply transformation to all candles
-        candle.time = candle.bin;
+      return candles.map((candle) => {
+        // Time in UTCTimestamp format
+        candle.time = Math.floor(new Date(candle.bin) / 1000);
 
-        // Set candles to 0 if it is first item
-        if (index === 0) {
-          candle.open = candle.open ?? 0;
-          candle.close = candle.close ?? 0;
-        }
-        // Every next candle
-        else {
-          candle.open = candle.open ?? lastCandle.open;
-          candle.close = candle.close ?? lastCandle.close;
+        // Clean empty candles
+        if (candle.close == null && candle.open == null) {
+          return { time: candle.time };
         }
 
-        lastCandle = candle;
-
+        return candle;
       });
 
-      return candles;
     });
 }
 

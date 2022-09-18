@@ -8,7 +8,8 @@ import CandlestickChart from "../charts/CandleStickChart";
 function App() {
 
   const pair = new Pair("KUJI_axlUSDC");
-  const priceEvolution = pair.candlesBarChartValues(TickPrecision.day1);
+  const priceEvolution = pair.candlesChartValues(TickPrecision.day1);
+  const currentPrice = pair.currentPrice().then(price => console.log(price));
 
   return (
     <main className="app">
@@ -16,7 +17,13 @@ function App() {
       <div className="content">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-4">
+            <h3>Current price:</h3>
+          </div>
+          <div className="row">
+            <div className="col-6">
+              <CandlestickChart data={ priceEvolution }/>
+            </div>
+            <div className="col-6">
               <CandlestickChart data={ priceEvolution }/>
             </div>
           </div>
