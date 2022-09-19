@@ -90,6 +90,7 @@ function Pair(ticker_id) {
       return candles.map((candle) => {
         // Time in UTCTimestamp format
         candle.time = Math.floor(new Date(candle.bin) / 1000);
+        candle.value = candle.volume;
 
         // Clean empty candles
         if (candle.close == null && candle.open == null) {

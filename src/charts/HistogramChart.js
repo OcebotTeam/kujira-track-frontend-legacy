@@ -13,13 +13,8 @@ const HistogramChart = (props) => {
     });
 
     data.then(values => {
-      values.forEach(value => {
-        value.time = value.bin;
-        value.value = value.high;
-      });
-      console.log(values);
       histogramSeries.setData(values);
-      chart.timeScale().fitContent();
+      //chart.timeScale().fitContent();
     });
 
     const handleResize = () => {

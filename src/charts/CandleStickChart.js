@@ -20,7 +20,6 @@ const CandlestickChart = (props) => {
 
     data.then(values => {
       barSeries.setData(values);
-      chart.timeScale().fitContent();
     });
 
     const handleResize = () => {

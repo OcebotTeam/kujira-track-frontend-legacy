@@ -4,11 +4,12 @@ import "./App.css";
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
 import CandlestickChart from "../charts/CandleStickChart";
+import HistogramChart from "../charts/HistogramChart";
 
 function App() {
 
   const pair = new Pair("KUJI_axlUSDC");
-  const priceEvolution = pair.candlesChartValues(TickPrecision.day1);
+  const evolution = pair.candlesChartValues(TickPrecision.day1);
   const currentPrice = pair.currentPrice().then(price => console.log(price));
 
   return (
@@ -21,10 +22,10 @@ function App() {
           </div>
           <div className="row">
             <div className="col-6">
-              <CandlestickChart data={ priceEvolution }/>
+              <CandlestickChart data={ evolution }/>
             </div>
             <div className="col-6">
-              <CandlestickChart data={ priceEvolution }/>
+              <HistogramChart data={ evolution } />
             </div>
           </div>
         </div>
