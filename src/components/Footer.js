@@ -1,6 +1,6 @@
 const Footer = (props) => {
   return (
-    <footer className="container text-white">
+    <footer className="container text-white mb-5">
       <div className="text-white">
         <hr/>
       </div>

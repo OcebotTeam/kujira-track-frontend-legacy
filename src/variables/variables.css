@@ -7,4 +7,5 @@
     --bs-body-bg: var(--kt-body-bg-color);
     --bs-body-font-family: Montserrat var(--bs-font-sans-serif);
     --bs-dark-rgb: 39, 41, 61;
+    --bs-dark: #27293d;
 }

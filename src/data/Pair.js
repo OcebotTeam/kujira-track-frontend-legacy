@@ -47,25 +47,14 @@ function Pair(ticker_id) {
 
   /**
    * Returns candle raw values from de API given a precision period
-   * @param precision
+   * @param precision {TickPrecision}
+   * @param periods {number} amount of historic data in days
    * @returns {Promise<any>}
    */
-  this.candlesRawValues = (precision) => {
-    const fromDate = new Date();
+  this.candlesRawValues = (precision, periods) => {
     const toDate = new Date();
-    toDate.setMinutes(toDate.getMinutes() + 1);
-
-    // TODO: add "period" param to replace hardcoded switch.
-    switch (precision) {
-      case TickPrecision.day1:
-        fromDate.setMonth(fromDate.getMonth() - 6);
-        break;
-      case TickPrecision.month1:
-        fromDate.setFullYear(fromDate.getFullYear() - 6);
-        break;
-      default:
-        fromDate.setMinutes(fromDate.getMinutes() - precision * 1000);
-    }
+    const fromDate = new Date();
+    fromDate.setDate(fromDate.getDate() - periods);
 
     let endpoint =
       process.env.REACT_APP_API_BRIDGE_URL +
@@ -84,9 +73,14 @@ function Pair(ticker_id) {
       .catch((error) => console.log(error));
   };
 
-  this.candlesChartValues = (precision) =>
-    this.candlesRawValues(precision).then((candles) => {
+  this.lastDayVolume = () => {
+    return this.candlesRawValues(TickPrecision.day1, 1).then((candles) => {
+      return candles.pop().volume;
+    });
+  };
 
+  this.candlesChartValues = (precision, periods) => {
+    return this.candlesRawValues(precision, periods).then((candles) => {
       return candles.map((candle) => {
         // Time in UTCTimestamp format
         candle.time = Math.floor(new Date(candle.bin) / 1000);
@@ -99,8 +93,8 @@ function Pair(ticker_id) {
 
         return candle;
       });
-
     });
+  };
 }
 
 export default Pair;

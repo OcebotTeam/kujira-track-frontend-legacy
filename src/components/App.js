@@ -10,11 +10,11 @@ import HistogramChart from "../charts/HistogramChart";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import InfoBar from "./InfoBar";
+import PairDataTable from "./PairDataTable";
 
 function App() {
   const pair = new Pair("KUJI_axlUSDC");
-  const evolution = pair.candlesChartValues(TickPrecision.day1);
-  const currentPrice = pair.currentPrice().then((price) => console.log(price));
+  const candles = pair.candlesChartValues(TickPrecision.day1, 100);
 
   return (
     <div className="app">
@@ -27,7 +27,7 @@ function App() {
               <div className="card-body">
                 <h5 className="text-muted fw-light">Price (1D)</h5>
                 <h3 className="card-title text-white">KUJI/alxUSDC</h3>
-                <CandlestickChart data={evolution} />
+                <CandlestickChart data={candles} />
               </div>
             </div>
           </div>
@@ -37,15 +37,21 @@ function App() {
               <div className="card-body">
                 <h5 className="text-muted fw-light">Volume (1D)</h5>
                 <h3 className="card-title text-white">KUJI/alxUSDC</h3>
-                <HistogramChart data={evolution} />
+                <HistogramChart data={candles} />
               </div>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col mb-5">
             <InfoBar />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col mb-5">
+            <PairDataTable />
           </div>
         </div>
       </main>

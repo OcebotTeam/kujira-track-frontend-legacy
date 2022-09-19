@@ -66,7 +66,7 @@ const InfoBar = (props) => {
   return (
     <div className="blue-gradient-bg rounded p-4 container-fluid">
       <div className="row">
-        <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-left">
+        <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
           <span className="d-inline d-lg-block d-xxl-inline">Total transactions</span>
           <div className="float-end float-lg-none float-xxl-end fw-light"> {transactions} </div>
         </div>
@@ -74,7 +74,7 @@ const InfoBar = (props) => {
         <div className="vr p-0 text-white d-none d-lg-block"></div>
         <hr className="text-white my-4 d-block d-lg-none" />
 
-        <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-left">
+        <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
           <span className="d-inline d-lg-block d-xxl-inline">Kujira/axlUSDC</span>
           <div className="float-end float-lg-none float-xxl-end fw-light"> ${price} </div>
         </div>
@@ -82,7 +82,7 @@ const InfoBar = (props) => {
         <div className="vr p-0 text-white d-none d-lg-block"></div>
         <hr className="text-white my-4 d-block d-lg-none" />
 
-        <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-left">
+        <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
           <span className="d-inline d-lg-block d-xxl-inline">Total staked</span>
           <div className="float-end float-lg-none float-xxl-end fw-light"> {stake} </div>
         </div>

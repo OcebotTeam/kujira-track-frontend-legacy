@@ -1,0 +1,7 @@
+.pair-data-table table {
+    border-color: #404254;
+}
+
+.pair-data-table table tbody tr:last-child td {
+    border: none
+}
