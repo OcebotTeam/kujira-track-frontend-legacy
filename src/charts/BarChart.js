@@ -13,8 +13,6 @@ const BarChart = (props) => {
       downColor: colors.teal
     });
 
-    console.log(data);
-
     data.then(values => {
       barSeries.setData(values);
       chart.timeScale().fitContent();

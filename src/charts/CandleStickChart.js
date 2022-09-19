@@ -16,8 +16,6 @@ const CandlestickChart = (props) => {
       borderVisible: false
     });
 
-    console.log(data);
-
     data.then(values => {
       barSeries.setData(values);
     });

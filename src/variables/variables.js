@@ -8,7 +8,7 @@ const colors = {
   teal: "#60fbd0",
   white: "#ffffff",
 
-  chartBackground: "#27293d"
-}
+  chartBackground: "#27293d",
+};
 
 export { colors };
