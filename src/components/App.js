@@ -1,10 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min";
+import "../variables/variables.css"
 import "./App.css";
 
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
 import CandlestickChart from "../charts/CandleStickChart";
 import HistogramChart from "../charts/HistogramChart";
+import Navbar from "./Navbar";
 
 function App() {
 
@@ -13,24 +16,40 @@ function App() {
   const currentPrice = pair.currentPrice().then(price => console.log(price));
 
   return (
-    <main className="app">
-      <div className="sidebar">Test Test Test Test</div>
-      <div className="content">
-        <div className="container-fluid">
-          <div className="row">
-            <h3>Current price:</h3>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <CandlestickChart data={ evolution }/>
+    <div className="app">
+
+      <Navbar/>
+
+      <main className="container py-5">
+
+        <div className="row">
+
+          <div className="col-lg-6 mb-5">
+            <div className="card bg-dark">
+              <div className="card-body">
+                <h5 className="text-muted">Price (1D)</h5>
+                <h3 className="card-title text-white">KUJI/alxUSDC</h3>
+                <CandlestickChart data={ evolution }/>
+              </div>
             </div>
-            <div className="col-6">
-              <HistogramChart data={ evolution } />
+          </div>
+
+
+          <div className="col-lg-6 mb-5">
+            <div className="card bg-dark">
+              <div className="card-body">
+                <h5 className="text-muted">Volume (1D)</h5>
+                <h3 className="card-title text-white">KUJI/alxUSDC</h3>
+                <HistogramChart data={ evolution } />
+              </div>
             </div>
           </div>
+
         </div>
-      </div>
-    </main>
+
+      </main>
+
+    </div>
   );
 }
 

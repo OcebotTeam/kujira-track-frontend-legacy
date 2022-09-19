@@ -8,8 +8,7 @@ const colors = {
   teal: "#60fbd0",
   white: "#ffffff",
 
-  upCandle: "#00c853",
-  downCandle: "#e53935"
+  chartBackground: "#27293d"
 }
 
 export { colors };
