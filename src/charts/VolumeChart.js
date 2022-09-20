@@ -2,18 +2,21 @@ import React, { useEffect, useRef } from "react";
 import { colors } from "../variables/variables";
 import baseChart from "./BaseChart";
 
-const AreaChart = (props) => {
+const VolumeChart = (props) => {
   const { data = [] } = props;
   const chartContainerRef = useRef();
 
   useEffect(() => {
     const chart = baseChart(chartContainerRef);
-    const lineSeries = chart.addLineSeries({
+    const histogramSeries = chart.addHistogramSeries({
       color: colors.blue,
+      priceFormat: {
+        type: "volume",
+      },
     });
 
-    data.then((values) => {
-      lineSeries.setData(values);
+    data.then(values => {
+      histogramSeries.setData(values);
       //chart.timeScale().fitContent();
     });
 
@@ -34,4 +37,4 @@ const AreaChart = (props) => {
   return <div ref={chartContainerRef}></div>;
 };
 
-export default AreaChart;
+export default VolumeChart;

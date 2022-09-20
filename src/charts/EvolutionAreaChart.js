@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { colors } from "../variables/variables";
 import baseChart from "./BaseChart";
 
-const AreaChart = (props) => {
+const EvolutionAreaChart = (props) => {
   const { data = [] } = props;
   const chartContainerRef = useRef();
 
@@ -12,6 +12,9 @@ const AreaChart = (props) => {
       lineColor: colors.darkBlue,
       topColor: colors.blue,
       bottomColor: colors.blue,
+      priceFormat: {
+        type: "volume",
+      },
     });
 
     data.then((values) => {
@@ -36,4 +39,4 @@ const AreaChart = (props) => {
   return <div ref={chartContainerRef}></div>;
 };
 
-export default AreaChart;
+export default EvolutionAreaChart;
