@@ -23,7 +23,7 @@ const Footer = (props) => {
         just for educational use. There is no assurance that all the numbers
         provided on this site are 100% accurate.
       </p>
-      <p className="text-center text-white">
+      <div className="text-center text-white">
         <div className="blue-gradient-bg d-inline-block py-1 px-2 me-2 rounded">Tips</div>
         <span id="tip-address">kujira14k3ln0t75n3uvktpan6trgzt6xlxeg2zafe2kw</span>
         <i className="bi bi-clipboard ms-2 curso" onClick={copyTipAddress} style={{ "cursor": "pointer" }}></i>
@@ -33,7 +33,7 @@ const Footer = (props) => {
             Thanks!
           </div>
         )}
-      </p>
+      </div>
     </footer>
   );
 };

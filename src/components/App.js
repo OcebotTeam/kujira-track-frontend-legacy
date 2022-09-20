@@ -19,14 +19,14 @@ import LineChart from "../charts/LineChart";
 function App() {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
   const kujiUskPair = new Pair("KUJI_USK");
+
   const kujiUsdcCandles = kujiUsdcPair.candlesChartValues(TickPrecision.day1, 100);
-  const kujiUskCandles = kujiUskPair.candlesChartValues(TickPrecision.day1, 100);
+  const kujiUsdcVolumes = kujiUsdcPair.volumesChartValues(TickPrecision.day1, 100);
+  const kujiUskVolumes = kujiUskPair.volumesChartValues(TickPrecision.day1, 100);
+
   const wallets = Accumulated("wallets");
   const stakedTokens = Accumulated("stakedtokens");
   const totalTransactions = Accumulated("transactions");
-
-  console.log(wallets);
-  console.log(stakedTokens);
 
   return (
     <div className="app">
@@ -49,7 +49,7 @@ function App() {
               <div className="card-body">
                 <h5 className="text-muted fw-light">Volume (1D)</h5>
                 <h3 className="card-title text-white">KUJI/alxUSDC</h3>
-                <HistogramChart data={kujiUsdcCandles} />
+                <HistogramChart data={kujiUsdcVolumes} />
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ function App() {
               <div className="card-body">
                 <h5 className="text-muted fw-light">Volume (1D)</h5>
                 <h3 className="card-title text-white">KUJI/USK</h3>
-                <HistogramChart data={kujiUskCandles} />
+                <HistogramChart data={kujiUskVolumes} />
               </div>
             </div>
           </div>

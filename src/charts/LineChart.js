@@ -13,7 +13,6 @@ const AreaChart = (props) => {
     });
 
     data.then((values) => {
-      console.log(values);
       lineSeries.setData(values);
       //chart.timeScale().fitContent();
     });

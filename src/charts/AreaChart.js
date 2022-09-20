@@ -15,7 +15,6 @@ const AreaChart = (props) => {
     });
 
     data.then((values) => {
-      console.log(values);
       areaSeries.setData(values);
       //chart.timeScale().fitContent();
     });

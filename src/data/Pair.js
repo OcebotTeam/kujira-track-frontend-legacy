@@ -19,29 +19,6 @@ const dateToApiFormat = (date, tzString = "UTC") => {
 };
 
 /**
- * Returns proper volume amount.
- *
- * @param ticker_id {TickPrecision}
- * @param rawVolume
- * @returns {Promise<Number>}
- */
-const adjustedVolume = (ticker_id, rawVolume) => {
-  const divider = 1000000;
-  const nominativeTickerId = Pairs[ticker_id].nominative;
-
-  if (nominativeTickerId !== undefined) {
-    const nominativePair = new Pair(nominativeTickerId);
-    return nominativePair
-      .lastDayPrice()
-      .then((price) => (rawVolume / divider) * price);
-  } else {
-    return new Promise((resolve) => {
-      resolve(rawVolume / divider);
-    });
-  }
-};
-
-/**
  * Pair object
  *
  * @param ticker_id
@@ -121,9 +98,9 @@ function Pair(ticker_id) {
    * @returns {Promise<Number>}
    */
   this.lastDayVolume = () => {
-    return this.candlesRawValues(TickPrecision.day1, 2).then((candles) => {
-      return adjustedVolume(ticker_id, candles[candles.length - 2].volume);
-    });
+    return this.volumesChartValues(TickPrecision.day1, 2).then(
+      (values) => values[values.length -2].value
+    );
   };
 
   /**
@@ -145,6 +122,38 @@ function Pair(ticker_id) {
         return candle;
       });
     });
+  };
+
+  /**
+   * Returns histogram data adapted to Lightweigth Charts library.
+   * @returns {Promise<Array>}
+   */
+  this.volumesChartValues = (precision, periods) => {
+    const divider = 1000000;
+    const nominativeTickerId = Pairs[ticker_id].nominative;
+
+    if (nominativeTickerId !== undefined) {
+      const nominativePair = new Pair(nominativeTickerId);
+      return nominativePair.lastDayPrice().then((price) => {
+        return this.candlesRawValues(precision, periods).then((candles) => {
+          return candles.map((candle) => {
+               return {
+              time: Math.floor(new Date(candle.bin) / 1000),
+              value: Math.floor(candle.volume / divider * price)
+            };
+          });
+        });
+      });
+    } else {
+      return this.candlesRawValues(precision, periods).then((candles) => {
+        return candles.map((candle) => {
+          return {
+            time: Math.floor(new Date(candle.bin) / 1000),
+            value: Math.floor(candle.volume / divider)
+          };
+        });
+      });
+    }
   };
 }
 
