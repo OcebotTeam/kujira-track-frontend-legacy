@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./InfoBar.css";
 import { numberWithCommas } from "../data/Math";
 
 const InfoBar = (props) => {
@@ -67,7 +66,7 @@ const InfoBar = (props) => {
     <div className="blue-gradient-bg rounded p-4 container-fluid">
       <div className="row">
         <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
-          <span className="d-inline d-lg-block d-xxl-inline">Total transactions</span>
+          <span className="d-inline d-lg-block d-xxl-inline"><i className="bi bi-list-ul align-text-top me-3"></i>Total transactions</span>
           <div className="float-end float-lg-none float-xxl-end fw-light"> {transactions} </div>
         </div>
 
@@ -75,7 +74,7 @@ const InfoBar = (props) => {
         <hr className="text-white my-4 d-block d-lg-none" />
 
         <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
-          <span className="d-inline d-lg-block d-xxl-inline">Kujira/axlUSDC</span>
+          <span className="d-inline d-lg-block d-xxl-inline"><i className="bi bi-graph-up-arrow align-text-top me-3"></i>Kujira/axlUSDC</span>
           <div className="float-end float-lg-none float-xxl-end fw-light"> ${price} </div>
         </div>
 
@@ -83,7 +82,7 @@ const InfoBar = (props) => {
         <hr className="text-white my-4 d-block d-lg-none" />
 
         <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
-          <span className="d-inline d-lg-block d-xxl-inline">Total staked</span>
+          <span className="d-inline d-lg-block d-xxl-inline"><i className="bi bi-lock align-text-top me-3"></i>Total staked</span>
           <div className="float-end float-lg-none float-xxl-end fw-light"> {stake} </div>
         </div>
       </div>

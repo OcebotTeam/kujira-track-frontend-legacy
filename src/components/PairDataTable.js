@@ -20,13 +20,10 @@ const PairDataTable = () => {
             <thead>
               <tr>
                 <th>
-                  <h5>
-                    FIN Pairs
-                    <span className="fw-light text-muted ms-2">(1D)</span>
-                  </h5>
+                  <h5>FIN Pairs</h5>
                 </th>
                 <th className="text-center">Price</th>
-                <th className="text-end">Last day volume</th>
+                <th className="text-end"><i className="bi bi-bar-chart me-2"></i>Last day volume</th>
               </tr>
             </thead>
 

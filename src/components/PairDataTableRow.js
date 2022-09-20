@@ -19,7 +19,7 @@ const PairDataTableRow = (props) => {
 
   return (
     <tr>
-      <td className="text-muted">{ticker_id}</td>
+      <td className="text-muted">{String(ticker_id).replace("_", "/")}</td>
       <td className="text-center">${price}</td>
       <td className="text-end">${volume}</td>
     </tr>
