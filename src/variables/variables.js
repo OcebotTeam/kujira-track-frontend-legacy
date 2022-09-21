@@ -8,6 +8,7 @@ const colors = {
   teal: "#60fbd0",
   white: "#ffffff",
 
+  bodyBackground: "#1e1e2f",
   chartBackground: "#27293d",
 };
 

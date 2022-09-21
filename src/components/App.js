@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../variables/variables.css";
 import "./App.css";
 
+import CookieConsent from "react-cookie-consent";
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
 import CandlestickChart from "../charts/CandleStickChart";
@@ -15,6 +16,7 @@ import Footer from "./Footer";
 import InfoBar from "./InfoBar";
 import PairDataTable from "./PairDataTable";
 import { Accumulated, StakedTokens } from "../data/Accumulated";
+import {colors} from "../variables/variables";
 
 function App() {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
@@ -113,6 +115,11 @@ function App() {
       </main>
 
       <Footer />
+
+      <CookieConsent
+          style={{ background: colors.chartBackground, borderTop: "1px solid " + colors.bodyBackground }}
+          buttonStyle={{ color: colors.white, background: colors.blue, borderRadius: "4px" }}
+      >This website uses cookies to enhance the user experience.</CookieConsent>
     </div>
   );
 }
