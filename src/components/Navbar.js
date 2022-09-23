@@ -33,6 +33,7 @@ const Navbar = () => {
                 className="nav-link"
                 href="https://twitter.com/ocebotKuji"
                 target="_blank"
+                rel="noreferrer"
               >
                 Twitter
               </a>
@@ -44,6 +45,7 @@ const Navbar = () => {
               href="https://blue.kujira.app/stake/kujiravaloper1wlduasdfr9jea5t5awulgs8tky3tdat20y02k0"
               target="_blank"
               className="btn me-2 blue-gradient-bg text-dark border border-0"
+              rel="noreferrer"
             >
               Delegate
             </a>
