@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { numberWithCommas } from "../data/Math";
 
-const InfoBar = (props) => {
+const InfoBar = () => {
   const [transactions, setTransactions] = useState("...");
   const [price, setPrice] = useState("...");
   const [stake, setStake] = useState("...");
@@ -71,7 +71,7 @@ const InfoBar = (props) => {
         </div>
 
         <div className="vr p-0 text-white d-none d-lg-block"></div>
-        <hr className="text-white my-4 d-block d-lg-none" />
+        <hr className="text-white my-4 d-block d-lg-none" style={{ boxSizing: "border-box"}}/>
 
         <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
           <span className="d-inline d-lg-block d-xxl-inline"><i className="bi bi-graph-up-arrow align-text-top me-3"></i>Kujira/axlUSDC</span>
@@ -79,7 +79,7 @@ const InfoBar = (props) => {
         </div>
 
         <div className="vr p-0 text-white d-none d-lg-block"></div>
-        <hr className="text-white my-4 d-block d-lg-none" />
+        <hr className="text-white my-4 d-block d-lg-none" style={{ boxSizing: "border-box"}} />
 
         <div className="col text-white fs-5 fw-bold px-4 text-lg-center text-xxl-start">
           <span className="d-inline d-lg-block d-xxl-inline"><i className="bi bi-lock align-text-top me-3"></i>Total staked</span>

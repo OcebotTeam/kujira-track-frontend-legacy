@@ -1,24 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "../variables/variables.css";
-import "./App.css";
-
-import CookieConsent from "react-cookie-consent";
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
+import { Accumulated, StakedTokens } from "../data/Accumulated";
 import CandlestickChart from "../charts/CandleStickChart";
 import VolumeChart from "../charts/VolumeChart";
+import InfoBar from "../components/InfoBar";
 import EvolutionLineChart from "../charts/EvolutionLineChart";
 import EvolutionAreaChart from "../charts/EvolutionAreaChart";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import InfoBar from "./InfoBar";
-import PairDataTable from "./PairDataTable";
-import { Accumulated, StakedTokens } from "../data/Accumulated";
-import {colors} from "../variables/variables";
+import PairDataTable from "../components/PairDataTable";
 
-function App() {
+const Dashboard = () => {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
   const kujiUskPair = new Pair("KUJI_USK");
 
@@ -32,7 +22,8 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar />
+
+
 
       <main className="container py-5">
         <div className="row">
@@ -100,7 +91,7 @@ function App() {
             <div className="card bg-dark">
               <div className="card-body">
                 <h5 className="text-muted fw-light">Evolution</h5>
-                <h3 className="card-title text-white">Staked tokens</h3>
+                <h3 className="card-title text-white">Staked KUJI</h3>
                 <EvolutionAreaChart data={stakedTokens} />
               </div>
             </div>
@@ -114,14 +105,8 @@ function App() {
         </div>
       </main>
 
-      <Footer />
-
-      <CookieConsent
-          style={{ background: colors.chartBackground, borderTop: "1px solid " + colors.bodyBackground }}
-          buttonStyle={{ color: colors.white, background: colors.blue, borderRadius: "4px" }}
-      >This website uses cookies to enhance the user experience.</CookieConsent>
     </div>
   );
-}
+};
 
-export default App;
+export default Dashboard;
