@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { numberWithCommas } from "../data/Math";
+import { numberWithCommas } from "../../data/Math";
 
 const InfoBar = () => {
   const [transactions, setTransactions] = useState("...");

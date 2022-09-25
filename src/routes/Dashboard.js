@@ -1,12 +1,12 @@
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
 import { Accumulated, StakedTokens } from "../data/Accumulated";
+import InfoBar from "../components/dashboard/InfoBar";
+import PairDataTable from "../components/dashboard/PairDataTable";
 import CandlestickChart from "../charts/CandleStickChart";
 import VolumeChart from "../charts/VolumeChart";
-import InfoBar from "../components/InfoBar";
 import EvolutionLineChart from "../charts/EvolutionLineChart";
 import EvolutionAreaChart from "../charts/EvolutionAreaChart";
-import PairDataTable from "../components/PairDataTable";
 import { colors } from "../variables/variables";
 
 const Dashboard = () => {
@@ -27,7 +27,7 @@ const Dashboard = () => {
       <h1 className="mb-3 fs-2 fw-bold text-uppercase" style={{ color: colors.bgLight }}>Dashboard</h1>
 
       <div className="row">
-        <div className="col-lg-6 mb-5">
+        <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
               <h5 className="text-muted fw-light">Price (1D)</h5>
@@ -37,7 +37,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="col-lg-6 mb-5">
+        <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
               <h5 className="text-muted fw-light">Volume (1D)</h5>
@@ -49,13 +49,13 @@ const Dashboard = () => {
       </div>
 
       <div className="row">
-        <div className="col mb-5">
+        <div className="col mb-3 mb-lg-4">
           <InfoBar />
         </div>
       </div>
 
       <div className="row">
-        <div className="col-lg-6 mb-5">
+        <div className="col-lg-6 mb-2 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
               <h5 className="text-muted fw-light">Evolution</h5>
@@ -65,7 +65,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="col-lg-6 mb-5">
+        <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
               <h5 className="text-muted fw-light">Volume (1D)</h5>
@@ -77,7 +77,7 @@ const Dashboard = () => {
       </div>
 
       <div className="row">
-        <div className="col-lg-6 mb-5">
+        <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
               <h5 className="text-muted fw-light">Evolution</h5>
@@ -87,7 +87,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="col-lg-6 mb-5">
+        <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
               <h5 className="text-muted fw-light">Evolution</h5>
@@ -99,7 +99,7 @@ const Dashboard = () => {
       </div>
 
       <div className="row">
-        <div className="col mb-5">
+        <div className="col mb-3 mb-lg-4">
           <PairDataTable />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Pair from "../data/Pair";
-import { numberWithCommas } from "../data/Math";
+import Pair from "../../data/Pair";
+import { numberWithCommas } from "../../data/Math";
 
 const PairDataTableRow = (props) => {
   const { ticker_id } = props;

@@ -1,6 +1,6 @@
 import "./PairDataTable.css";
 
-import pairs from "../data/pairs.json";
+import pairs from "../../data/pairs.json";
 import PairDataTableRow from "./PairDataTableRow";
 
 const PairDataTable = () => {

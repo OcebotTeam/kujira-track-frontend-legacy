@@ -8,10 +8,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/shared/Navbar";
 import Dashboard from "./routes/Dashboard";
 import Volumes from "./routes/Volumes";
-import Footer from "./components/Footer";
+import Footer from "./components/shared/Footer";
 import CookieConsent from "react-cookie-consent";
 import { colors } from "./variables/variables";
 
