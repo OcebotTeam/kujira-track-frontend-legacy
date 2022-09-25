@@ -11,7 +11,7 @@ const Volumes = () => {
 
   const filteredCharts = () => {
     return charts.filter(chart => {
-      return !!(chart.key.toLowerCase().includes(filter));
+      return !!(chart.key.toLowerCase().includes(filter.toLowerCase()));
     })
   }
 
