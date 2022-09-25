@@ -48,16 +48,16 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="navbar-text text-center text-lg-start">
-            <span className="fst-italic d-none d-xl-inline">
+            <span className="fst-italic d-none d-xl-inline me-3">
               If you find this info useful please consider to
             </span>
             <a
               href="https://blue.kujira.app/stake/kujiravaloper1wlduasdfr9jea5t5awulgs8tky3tdat20y02k0"
               target="_blank"
-              className="btn ms-xl-2 me-lg-2 blue-gradient-bg text-dark border border-0"
+              className="btn me-lg-2 blue-gradient-bg text-dark border border-0"
               rel="noreferrer"
             >
-              Delegate
+              STAKE
             </a>
           </div>
         </div>

@@ -15,9 +15,8 @@ const Volumes = () => {
     })
   }
 
-  filteredCharts();
-
   useEffect(() => {
+    // Get all volume charts
     const charts = [];
     for (const pairId in pairs) {
       charts.push(
@@ -50,11 +49,11 @@ const Volumes = () => {
         Volumes
       </h1>
 
-      {/*<div className="row">*/}
-      {/*  <div className="col mb-3 mb-lg-4">*/}
-      {/*    <VolumesInfoBar />*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <div className="row">
+        <div className="col mb-3 mb-lg-4">
+          <VolumesInfoBar />
+        </div>
+      </div>
 
       <div className="row">
         <div className="col mb-3 mb-lg-4">
