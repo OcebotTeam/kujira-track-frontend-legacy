@@ -31,15 +31,15 @@ const Navbar = () => {
                 Dashboard
               </Link>
             </li>
-            {/*<li className="nav-item">*/}
-            {/*  <Link*/}
-            {/*    className="nav-link active"*/}
-            {/*    aria-current="page"*/}
-            {/*    to="/volumes"*/}
-            {/*  >*/}
-            {/*    Volumes*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/volumes"
+              >
+                Volumes
+              </Link>
+            </li>
             <li className="nav-item text-center text-lg-start">
               <a
                 className="nav-link"

@@ -29,7 +29,7 @@ root.render(
       <Footer />
 
       <CookieConsent
-        style={{ background: colors.chartBackground, borderTop: "1px solid " + colors.bodyBackground }}
+        style={{ background: colors.bgLight, borderTop: "1px solid " + colors.bgDark }}
         buttonStyle={{ color: colors.white, background: colors.blue, borderRadius: "4px" }}
       >This website uses cookies to enhance the user experience.</CookieConsent>
     </BrowserRouter>

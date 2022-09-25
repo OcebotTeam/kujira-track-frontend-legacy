@@ -6,7 +6,7 @@ const baseChart = chartContainerRef => {
     layout: {
       background: {
         type: ColorType.Solid,
-        color: colors.chartBackground,
+        color: colors.bgLight,
       },
       textColor: colors.white,
     },

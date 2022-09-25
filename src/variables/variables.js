@@ -8,8 +8,8 @@ const colors = {
   teal: "#60fbd0",
   white: "#ffffff",
 
-  bodyBackground: "#1e1e2f",
-  chartBackground: "#27293d",
+  bgDark: "#1e1e2f",
+  bgLight: "#27293d",
 };
 
 export { colors };
