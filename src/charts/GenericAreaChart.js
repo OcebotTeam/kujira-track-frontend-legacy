@@ -19,7 +19,11 @@ const GenericAreaChart = (props) => {
 
     data.then((values) => {
       areaSeries.setData(values);
-      //chart.timeScale().fitContent();
+
+      // Prevent gaps in desktop when there is no enough historic values.
+      if (document.body.clientWidth >= 768 && values.length < 80) {
+        chart.timeScale().fitContent();
+      }
     });
 
     const handleResize = () => {

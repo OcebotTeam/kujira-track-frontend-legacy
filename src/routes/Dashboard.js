@@ -67,7 +67,7 @@ const Dashboard = () => {
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card title="USK Minted" overTitle="Evolution">
+          <Card title="Minted USK" overTitle="Evolution">
             <BlueMintedUskChart />
           </Card>
         </div>
