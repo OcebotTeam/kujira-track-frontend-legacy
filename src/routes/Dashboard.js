@@ -4,7 +4,6 @@ import { Accumulated } from "../data/Accumulated";
 import InfoBar from "../components/dashboard/InfoBar";
 import PairDataTable from "../components/dashboard/PairDataTable";
 import GenericCandleStickChart from "../charts/GenericCandleStickChart";
-import GenericVolumeChart from "../charts/GenericVolumeChart";
 import GenericLineChart from "../charts/GenericLineChart";
 import GenericAreaChart from "../charts/GenericAreaChart";
 import { colors } from "../variables/variables";
@@ -12,16 +11,12 @@ import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
 import tickPrecision from "../data/TickPrecision";
 import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
+import BlueMintedUskChart from "../charts/BlueMintedUskChart";
 
 const Dashboard = () => {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
-  const kujiUskPair = new Pair("KUJI_USK");
 
   const kujiUsdcCandles = kujiUsdcPair.candlesChartValues(
-    TickPrecision.day1,
-    100
-  );
-  const kujiUskVolumes = kujiUskPair.volumesChartValues(
     TickPrecision.day1,
     100
   );
@@ -72,8 +67,8 @@ const Dashboard = () => {
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card title="KUJI/USK" overTitle="Volume (1D)">
-            <GenericVolumeChart data={kujiUskVolumes} />
+          <Card title="USK Minted" overTitle="Evolution">
+            <BlueMintedUskChart />
           </Card>
         </div>
       </div>
