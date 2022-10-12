@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { numberWithCommas } from "../../data/Math";
+import Pair from "../../data/Pair";
 
 const InfoBar = () => {
   const [transactions, setTransactions] = useState("...");
@@ -22,21 +23,10 @@ const InfoBar = () => {
   };
 
   const getKujiraCurrentPrice = () => {
-    fetch(
-      process.env.REACT_APP_API_BRIDGE_URL +
-        "/kbridge/coingecko/orderbook?ticker_id=KUJI_axlUSDC"
-    ).then((response) => {
-      response
-        .json()
-        .then((json) => {
-          const last_price = json.asks.shift().shift();
-          var currentPrice = parseFloat(last_price).toFixed(3);
-          setPrice(currentPrice);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    });
+    const pairKujiAxlusdc = new Pair("KUJI_axlUSDC");
+    pairKujiAxlusdc.currentPrice().then(value => {
+      setPrice(Number(value).toFixed(3));
+    })
   };
 
   const getStakedTokens = () => {
