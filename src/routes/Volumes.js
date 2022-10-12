@@ -75,6 +75,9 @@ const Volumes = () => {
 
       <div className="row">
         <div className="col mb-3 mb-lg-4">
+
+          <h3 className="text-white fw-light mt-4 mb-3">FIN Pairs individual volumes</h3>
+
           <input
             id="filter"
             name="filter"

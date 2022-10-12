@@ -87,7 +87,7 @@ const VolumeChart = (props) => {
       window.removeEventListener("resize", handleResize);
       chart.remove();
     };
-  });
+  }, [period, precision]);
 
   return <div ref={chartContainerRef}></div>;
 };
