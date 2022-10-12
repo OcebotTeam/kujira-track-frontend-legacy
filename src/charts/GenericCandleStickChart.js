@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { colors } from "../variables/variables";
 import baseChart from "./BaseChart";
 
-const CandlestickChart = (props) => {
+const GenericCandleStickChart = (props) => {
   const { data } = props;
   const chartContainerRef = useRef();
 
@@ -37,4 +37,4 @@ const CandlestickChart = (props) => {
   return <div ref={chartContainerRef}></div>;
 };
 
-export default CandlestickChart;
+export default GenericCandleStickChart;

@@ -2,24 +2,20 @@ import React, { useEffect, useRef } from "react";
 import { colors } from "../variables/variables";
 import baseChart from "./BaseChart";
 
-const EvolutionAreaChart = (props) => {
-  const { data = [] } = props;
+const GenericBarChart = (props) => {
+  const { data } = props;
   const chartContainerRef = useRef();
 
   useEffect(() => {
     const chart = baseChart(chartContainerRef);
-    const areaSeries = chart.addAreaSeries({
-      lineColor: colors.darkBlue,
-      topColor: colors.blue,
-      bottomColor: colors.blue,
-      priceFormat: {
-        type: "volume",
-      },
+    const barSeries = chart.addBarSeries({
+      upColor: colors.blue,
+      downColor: colors.teal
     });
 
-    data.then((values) => {
-      areaSeries.setData(values);
-      //chart.timeScale().fitContent();
+    data.then(values => {
+      barSeries.setData(values);
+      chart.timeScale().fitContent();
     });
 
     const handleResize = () => {
@@ -39,4 +35,4 @@ const EvolutionAreaChart = (props) => {
   return <div ref={chartContainerRef}></div>;
 };
 
-export default EvolutionAreaChart;
+export default GenericBarChart;
