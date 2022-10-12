@@ -3,10 +3,10 @@ import TickPrecision from "../data/TickPrecision";
 import { Accumulated, StakedTokens } from "../data/Accumulated";
 import InfoBar from "../components/dashboard/InfoBar";
 import PairDataTable from "../components/dashboard/PairDataTable";
-import CandlestickChart from "../charts/CandleStickChart";
-import VolumeChart from "../charts/VolumeChart";
-import EvolutionLineChart from "../charts/EvolutionLineChart";
-import EvolutionAreaChart from "../charts/EvolutionAreaChart";
+import GenericCandleStickChart from "../charts/GenericCandleStickChart";
+import GenericVolumeChart from "../charts/GenericVolumeChart";
+import GenericLineChart from "../charts/GenericLineChart";
+import GenericAreaChart from "../charts/GenericAreaChart";
 import { colors } from "../variables/variables";
 
 const Dashboard = () => {
@@ -32,7 +32,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="text-muted fw-light">Price (1D)</h5>
               <h3 className="card-title text-white">KUJI/alxUSDC</h3>
-              <CandlestickChart data={kujiUsdcCandles} />
+              <GenericCandleStickChart data={kujiUsdcCandles} />
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="text-muted fw-light">Volume (1D)</h5>
               <h3 className="card-title text-white">KUJI/alxUSDC</h3>
-              <VolumeChart data={kujiUsdcVolumes} />
+              <GenericVolumeChart data={kujiUsdcVolumes} />
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="text-muted fw-light">Evolution</h5>
               <h3 className="card-title text-white">Total transactions</h3>
-              <EvolutionLineChart data={totalTransactions} />
+              <GenericLineChart data={totalTransactions} />
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="text-muted fw-light">Volume (1D)</h5>
               <h3 className="card-title text-white">KUJI/USK</h3>
-              <VolumeChart data={kujiUskVolumes} />
+              <GenericVolumeChart data={kujiUskVolumes} />
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="text-muted fw-light">Evolution</h5>
               <h3 className="card-title text-white">Wallets</h3>
-              <EvolutionAreaChart data={wallets} />
+              <GenericAreaChart data={wallets} />
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="text-muted fw-light">Evolution</h5>
               <h3 className="card-title text-white">Staked KUJI</h3>
-              <EvolutionAreaChart data={stakedTokens} />
+              <GenericAreaChart data={stakedTokens} />
             </div>
           </div>
         </div>
