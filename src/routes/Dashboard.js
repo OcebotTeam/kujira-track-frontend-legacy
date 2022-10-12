@@ -1,6 +1,6 @@
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
-import { Accumulated, StakedTokens } from "../data/Accumulated";
+import { Accumulated } from "../data/Accumulated";
 import InfoBar from "../components/dashboard/InfoBar";
 import PairDataTable from "../components/dashboard/PairDataTable";
 import GenericCandleStickChart from "../charts/GenericCandleStickChart";
@@ -10,22 +10,33 @@ import GenericAreaChart from "../charts/GenericAreaChart";
 import { colors } from "../variables/variables";
 import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
 import tickPrecision from "../data/TickPrecision";
+import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
+import Card from "../components/shared/Card";
 
 const Dashboard = () => {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
   const kujiUskPair = new Pair("KUJI_USK");
 
-  const kujiUsdcCandles = kujiUsdcPair.candlesChartValues(TickPrecision.day1, 100);
-  const kujiUskVolumes = kujiUskPair.volumesChartValues(TickPrecision.day1, 100);
+  const kujiUsdcCandles = kujiUsdcPair.candlesChartValues(
+    TickPrecision.day1,
+    100
+  );
+  const kujiUskVolumes = kujiUskPair.volumesChartValues(
+    TickPrecision.day1,
+    100
+  );
 
   const wallets = Accumulated("wallets");
   const totalTransactions = Accumulated("transactions");
-  const stakedTokens = StakedTokens();
 
   return (
     <main className="container py-5">
-
-      <h1 className="mb-3 fs-2 fw-bold text-uppercase" style={{ color: colors.bgLight }}>Dashboard</h1>
+      <h1
+        className="mb-3 fs-2 fw-bold text-uppercase"
+        style={{ color: colors.bgLight }}
+      >
+        Dashboard
+      </h1>
 
       <div className="row">
         <div className="col-lg-6 mb-3 mb-lg-4">
@@ -41,16 +52,17 @@ const Dashboard = () => {
         <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
-              <h5 className="text-muted fw-light">Volume / Transactions (1D)</h5>
-              <h3 className="card-title text-white">
-                FIN accumulated volume
-              </h3>
+              <h5 className="text-muted fw-light">
+                Volume / Transactions (1D)
+              </h5>
+              <h3 className="card-title text-white">FIN accumulated volume</h3>
               <FinTotalVolumeChart
                 precision={tickPrecision.day1}
                 period={365}
               />
             </div>
-          </div>        </div>
+          </div>
+        </div>
       </div>
 
       <div className="row">
@@ -93,13 +105,9 @@ const Dashboard = () => {
         </div>
 
         <div className="col-lg-6 mb-3 mb-lg-4">
-          <div className="card bg-dark">
-            <div className="card-body">
-              <h5 className="text-muted fw-light">Evolution</h5>
-              <h3 className="card-title text-white">Staked KUJI</h3>
-              <GenericAreaChart data={stakedTokens} />
-            </div>
-          </div>
+          <Card title="Staked KUJI" overTitle="Evolution">
+            <BlueStakedKujiChart />
+          </Card>
         </div>
       </div>
 
