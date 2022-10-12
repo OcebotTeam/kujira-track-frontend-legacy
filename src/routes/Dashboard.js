@@ -8,13 +8,14 @@ import GenericVolumeChart from "../charts/GenericVolumeChart";
 import GenericLineChart from "../charts/GenericLineChart";
 import GenericAreaChart from "../charts/GenericAreaChart";
 import { colors } from "../variables/variables";
+import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
+import tickPrecision from "../data/TickPrecision";
 
 const Dashboard = () => {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
   const kujiUskPair = new Pair("KUJI_USK");
 
   const kujiUsdcCandles = kujiUsdcPair.candlesChartValues(TickPrecision.day1, 100);
-  const kujiUsdcVolumes = kujiUsdcPair.volumesChartValues(TickPrecision.day1, 100);
   const kujiUskVolumes = kujiUskPair.volumesChartValues(TickPrecision.day1, 100);
 
   const wallets = Accumulated("wallets");
@@ -40,12 +41,16 @@ const Dashboard = () => {
         <div className="col-lg-6 mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
-              <h5 className="text-muted fw-light">Volume (1D)</h5>
-              <h3 className="card-title text-white">KUJI/alxUSDC</h3>
-              <GenericVolumeChart data={kujiUsdcVolumes} />
+              <h5 className="text-muted fw-light">Volume / Transactions (1D)</h5>
+              <h3 className="card-title text-white">
+                FIN accumulated volume
+              </h3>
+              <FinTotalVolumeChart
+                precision={tickPrecision.day1}
+                period={365}
+              />
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
 
       <div className="row">
