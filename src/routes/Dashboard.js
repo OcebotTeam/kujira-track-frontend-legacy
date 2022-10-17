@@ -64,8 +64,12 @@ const Dashboard = () => {
 
       <div className="row">
         <div className={twoColumnColClasses}>
-          <Card title="Total transactions" overTitle="Evolution">
-            <GenericLineChart data={totalTransactions} />
+          <Card
+            title="Staked KUJI"
+            overTitle="Evolution"
+            imageTitle={kujiLogoImg}
+          >
+            <BlueStakedKujiChart />
           </Card>
         </div>
 
@@ -88,12 +92,8 @@ const Dashboard = () => {
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card
-            title="Staked KUJI"
-            overTitle="Evolution"
-            imageTitle={kujiLogoImg}
-          >
-            <BlueStakedKujiChart />
+          <Card title="Total transactions" overTitle="Evolution">
+            <GenericLineChart data={totalTransactions} />
           </Card>
         </div>
       </div>
