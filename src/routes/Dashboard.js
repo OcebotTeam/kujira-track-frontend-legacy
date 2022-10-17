@@ -13,6 +13,9 @@ import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
 import BlueMintedUskChart from "../charts/BlueMintedUskChart";
 
+import kujiLogoImg from "../assets/tokens/kuji/logo.png";
+import uskLogoImg from "../assets/tokens/usk/logo.png";
+
 const Dashboard = () => {
   const kujiUsdcPair = new Pair("KUJI_axlUSDC");
 
@@ -67,7 +70,11 @@ const Dashboard = () => {
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card title="Minted USK" overTitle="Evolution">
+          <Card
+            title="Minted USK"
+            overTitle="Evolution"
+            imageTitle={uskLogoImg}
+          >
             <BlueMintedUskChart />
           </Card>
         </div>
@@ -81,7 +88,11 @@ const Dashboard = () => {
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card title="Staked KUJI" overTitle="Evolution">
+          <Card
+            title="Staked KUJI"
+            overTitle="Evolution"
+            imageTitle={kujiLogoImg}
+          >
             <BlueStakedKujiChart />
           </Card>
         </div>
