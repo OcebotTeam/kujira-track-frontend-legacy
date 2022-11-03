@@ -71,7 +71,7 @@ const VolumeChart = (props) => {
 
         values.shift();
 
-        //lineSeries.setData(values);
+        lineSeries.setData(values);
       });
     });
 
