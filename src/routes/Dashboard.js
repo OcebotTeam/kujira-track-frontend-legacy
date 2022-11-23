@@ -48,8 +48,8 @@ const Dashboard = () => {
 
         <div className={twoColumnColClasses}>
           <Card
-            title="FIN accumulated volume"
-            overTitle="Volume (1D)"
+            title="FIN total volume / transactions"
+            overTitle="Volume/Transactions (1D)"
           >
             <FinTotalVolumeChart precision={tickPrecision.day1} period={365} />
           </Card>
