@@ -41,7 +41,7 @@ const Dashboard = () => {
 
       <div className="row">
         <div className={twoColumnColClasses}>
-          <Card title="KUJI/alxUSDC" overTitle="Price (1D)">
+          <Card title="KUJI/axlUSDC" overTitle="Price (1D)">
             <GenericCandleStickChart data={kujiUsdcCandles} />
           </Card>
         </div>
