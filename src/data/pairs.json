@@ -29,8 +29,20 @@
   "SCRT_axlUSDC": {
     "contract": "kujira1fkwjqyfdyktgu5f59jpwhvl23zh8aav7f98ml9quly62jx2sehysqa4unf"
   },
+  "SCRT_USK": {
+    "contract": "kujira1rpxf55u22q2tly9y8rgdrjgx9p52sus7jugaevj3hdt0z7sgvkcsyrhrv0"
+  },
+  "SHD_KUJI": {
+    "contract": "kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz"
+  },
+  "SCRT_USK": {
+    "contract": "kujira1rpxf55u22q2tly9y8rgdrjgx9p52sus7jugaevj3hdt0z7sgvkcsyrhrv0"
+  },
   "STARS_axlUSDC": {
     "contract": "kujira1jkte0pytr85qg0whmgux3vmz9ehmh82w40h8gaqeg435fnkyfxqq5m32qy"
+  },
+  "STARS_USK": {
+    "contract": "kujira1nm3yktzcgpnvwu6qpzqgl2ktyvlgsstc7ev849dd3ulaygw75mqqxvtnck"
   },
   "xAVAX_axlUSDC": {
     "contract": "kujira1qjxu65ucccpg8c5kac8ng6yxfqq85fluwd0p9nt74g2304qw8eyq930y7w",
@@ -38,6 +50,10 @@
   },
   "wETH_axlUSDC": {
     "contract": "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
+    "priceMultiplier": 1000000000000
+  },
+  "wETH_USK": {
+    "contract": "kujira17w9r23r8v8r7z5lphwj99296fhlye9ej5nq3hlqw554u63m88avspdl9tc",
     "priceMultiplier": 1000000000000
   },
   "KUJI_USK": {
@@ -69,5 +85,9 @@
   },
   "DOT_USK": {
     "contract": "kujira1jlzw6xal0n2c580g3wxs09tjhlzdht9y8dgszq3tupf8fhl7xjus7ep7ap"
-  }
+  },
+  "DOT_axlUSDC": {
+    "contract": "kujira1w4t2qpwvhyhz0g2mwgqjzgsw63dcy5hkfch0tgr8xj9qjcsauq8q5x0zxz"
+  },
+
 }
