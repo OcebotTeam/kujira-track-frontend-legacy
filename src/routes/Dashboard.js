@@ -12,6 +12,7 @@ import tickPrecision from "../data/TickPrecision";
 import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
 import BlueMintedUskChart from "../charts/BlueMintedUskChart";
+import BlueMintedUskStackChart from "../charts/BlueMintedUskStackChart";
 
 import kujiLogoImg from "../assets/tokens/kuji/logo.png";
 import uskLogoImg from "../assets/tokens/usk/logo.png";
@@ -80,6 +81,7 @@ const Dashboard = () => {
             imageTitle={uskLogoImg}
           >
             <BlueMintedUskChart />
+            <BlueMintedUskStackChart />
           </Card>
         </div>
       </div>

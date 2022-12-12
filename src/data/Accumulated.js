@@ -19,6 +19,25 @@ const MintedUsk = () => {
     .catch((error) => console.log(error));
 };
 
+const MintedUskStack = () => {
+    const walletsEndpoint = process.env.REACT_APP_API_BRIDGE_URL + "/v2/uskminted";
+
+    return fetch(walletsEndpoint)
+        .then((response) => response.json())
+        .then(json => {
+            const CollateralSet = json.uskminted;
+            for (let collateral in CollateralSet) {
+                CollateralSet[collateral] = CollateralSet[collateral].map(item => {
+                    item.value /= 1000000;
+                    return item;
+                });
+
+            }
+            return CollateralSet;
+        })
+        .catch((error) => console.log(error));
+};
+
 const StakedTokens = () => {
   const walletsEndpoint = process.env.REACT_APP_API_BRIDGE_URL + "/stakedtokens";
 
@@ -31,4 +50,4 @@ const StakedTokens = () => {
     .catch((error) => console.log(error));
 };
 
-export {Accumulated, StakedTokens, MintedUsk};
+export {Accumulated, StakedTokens, MintedUsk, MintedUskStack};
