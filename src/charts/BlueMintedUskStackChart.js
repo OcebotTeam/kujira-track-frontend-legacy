@@ -1,4 +1,4 @@
-import GenericAreaChart from "./GenericAreaChart";
+import GenericAreaStackChart from "./GenericAreaStackChart";
 import { MintedUskStack } from "../data/Accumulated";
 import { useEffect, useState } from "react";
 
@@ -13,12 +13,11 @@ const BlueMintedUskStackChart = () => {
       // const currentMintedUsk = values.at(-1).value;
       // setCurrentMintedUsk(values.at(-1).value);
       // setPercentage((currentMintedUsk / 10000));
-      console.log(values);
     });
   });
 
   return (
-    <GenericAreaChart data={mintedUsk}>
+    <GenericAreaStackChart data={mintedUsk}>
       <div className="position-relative">
         <div
           className="staked-kuji-legend text-white position-absolute"
@@ -29,7 +28,7 @@ const BlueMintedUskStackChart = () => {
           <span className="fw-bold">({Number(percentage).toFixed(2)}%)</span>
         </div>
       </div>
-    </GenericAreaChart>
+    </GenericAreaStackChart>
   );
 };
 

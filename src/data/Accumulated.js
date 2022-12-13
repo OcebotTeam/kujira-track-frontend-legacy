@@ -31,7 +31,6 @@ const MintedUskStack = () => {
                     item.value /= 1000000;
                     return item;
                 });
-
             }
             return CollateralSet;
         })
