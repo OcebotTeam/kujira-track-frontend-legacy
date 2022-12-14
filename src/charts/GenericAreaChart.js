@@ -9,7 +9,7 @@ const GenericAreaChart = (props) => {
   useEffect(() => {
     const chart = baseChart(chartContainerRef);
     const areaSeries = chart.addAreaSeries({
-      lineColor: colors.darkBlue,
+      lineColor: colors.blue,
       topColor: colors.blue,
       bottomColor: colors.blue,
       priceFormat: {

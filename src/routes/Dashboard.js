@@ -80,7 +80,6 @@ const Dashboard = () => {
             overTitle="Evolution"
             imageTitle={uskLogoImg}
           >
-            <BlueMintedUskChart />
             <BlueMintedUskStackChart />
           </Card>
         </div>

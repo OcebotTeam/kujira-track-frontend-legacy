@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { colors } from "../variables/variables";
+import { colors, areaStackColors } from "../variables/variables";
 import baseChart from "./BaseChart";
 
 const GenericAreaStackChart = (props) => {
@@ -10,19 +10,21 @@ const GenericAreaStackChart = (props) => {
     const chart = baseChart(chartContainerRef);
 
     data.then((values) => {
+      let counter = values.length;
       for (const series in values) {
         console.log(values[series]);
 
         const areaSeries = chart.addAreaSeries({
-          lineColor: colors.darkBlue,
-          topColor: colors.blue,
-          bottomColor: colors.blue,
+          lineColor: areaStackColors["stack" + counter],
+          topColor: areaStackColors["stack" + counter],
+          bottomColor: areaStackColors["stack" + counter],
           priceFormat: {
             type: "volume",
           },
         });
 
         areaSeries.setData(values[series]);
+        counter--;
       }
 
       // Prevent gaps in desktop when there is no enough historic values.

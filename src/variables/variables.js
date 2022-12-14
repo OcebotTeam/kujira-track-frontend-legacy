@@ -12,4 +12,10 @@ const colors = {
   bgLight: "#27293d",
 };
 
-export { colors };
+const areaStackColors = {
+  stack1: "#1e92e6",
+  stack2: "#a161d4",
+  stack3: "#60fbd0"
+};
+
+export { colors, areaStackColors };
