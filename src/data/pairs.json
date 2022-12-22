@@ -32,7 +32,7 @@
   "SCRT_USK": {
     "contract": "kujira1rpxf55u22q2tly9y8rgdrjgx9p52sus7jugaevj3hdt0z7sgvkcsyrhrv0"
   },
-  "SHD_KUJI": {
+  "SHD_USK": {
     "contract": "kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz"
   },
   "SCRT_USK": {
@@ -90,5 +90,13 @@
   "DOT_axlUSDC": {
     "contract": "kujira1w4t2qpwvhyhz0g2mwgqjzgsw63dcy5hkfch0tgr8xj9qjcsauq8q5x0zxz",
     "priceMultiplier": 10000
+  },
+  "wBNB_USK": {
+    "contract": "kujira1a0fyanyqm496fpgneqawhlsug6uqfvqg2epnw39q0jdenw3zs8zqsjhdr0",
+    "priceMultiplier": 1000000000000
+  },
+  "wBNB_USDC": {
+    "contract": "kujira1apkgj87fgfsq84swvkyfaemrq7t4deuh60887lek0hkgdjh5fj0qaz7fhx",
+    "priceMultiplier": 1000000000000
   }
 }
