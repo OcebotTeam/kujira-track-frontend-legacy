@@ -98,5 +98,9 @@
   "wBNB_USDC": {
     "contract": "kujira1apkgj87fgfsq84swvkyfaemrq7t4deuh60887lek0hkgdjh5fj0qaz7fhx",
     "priceMultiplier": 1000000000000
+  },
+  "STRD_USK": {
+    "contract": "kujira1cn922pcqrt4g2dr4va9vxk8h3w3jfxnxjqq2qp6zktjsehdzde6sz66um0"
   }
+  
 }
