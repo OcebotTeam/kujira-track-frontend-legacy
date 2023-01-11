@@ -12,8 +12,6 @@ const GenericAreaStackChart = (props) => {
     data.then((values) => {
       let counter = values.length;
       for (const series in values) {
-        console.log(values[series]);
-
         const areaSeries = chart.addAreaSeries({
           lineColor: areaStackColors["stack" + counter],
           topColor: areaStackColors["stack" + counter],

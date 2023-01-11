@@ -15,7 +15,8 @@ const colors = {
 const areaStackColors = {
   stack1: "#1e92e6",
   stack2: "#a161d4",
-  stack3: "#60fbd0"
+  stack3: "#60fbd0",
+  stack4: "#F0B90b"
 };
 
 export { colors, areaStackColors };

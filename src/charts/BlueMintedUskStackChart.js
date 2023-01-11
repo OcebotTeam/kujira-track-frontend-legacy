@@ -13,25 +13,32 @@ const BlueMintedUskStackChart = () => {
   // wETH
   const [wethPercentage, setWethPercentage] = useState(0);
   const [currentWethMintedUsk, setCurrentWethMintedUsk] = useState(0);
+  // wBNB
+  const [wbnbPercentage, setWbnbPercentage] = useState(0);
+  const [currentWbnbMintedUsk, setCurrentWbnbMintedUsk] = useState(0);
 
   const mintedUsk = MintedUskStack();
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
-      JSON.parse(JSON.stringify(values.wETH)), // 1
-      JSON.parse(JSON.stringify(values.DOT)), // 2
-      //values.ATOM, // 3
+      JSON.parse(JSON.stringify(values.wBNB)),
+      JSON.parse(JSON.stringify(values.wETH)),
+      JSON.parse(JSON.stringify(values.DOT)),
     ];
 
+    const sumCollateral = JSON.parse(JSON.stringify(values.ATOM));
     const atomLength = values.ATOM.length;
 
-    collaterals.forEach(collateral => {
-      let AtomPosition = atomLength - 1;
-      for (let i = collateral.length - 1; i >= 0; i--) {
-        collateral[i].value +=  values.ATOM[AtomPosition].value;
+
+    for (let i = collaterals.length - 1; i >= 0; i--) {
+      let AtomPosition =  atomLength - 1;
+
+      for (let j = collaterals[i].length - 1; j >= 0; j--) {
+        collaterals[i][j].value += sumCollateral[AtomPosition].value;
+        sumCollateral[AtomPosition].value =collaterals[i][j].value;
         AtomPosition--;
       }
-    })
+    }
 
     collaterals.push(JSON.parse(JSON.stringify(values.ATOM)));
 
@@ -52,6 +59,10 @@ const BlueMintedUskStackChart = () => {
       const currentWethMintedUsk = values.wETH.at(-1).value;
       setCurrentWethMintedUsk(values.wETH.at(-1).value);
       setWethPercentage((currentWethMintedUsk / 10000));
+      // wBNB figures
+      const currentWbnbMintedUsk = values.wBNB.at(-1).value;
+      setCurrentWbnbMintedUsk(values.wBNB.at(-1).value);
+      setWbnbPercentage((currentWbnbMintedUsk / 10000));
     });
   });
 
@@ -62,7 +73,7 @@ const BlueMintedUskStackChart = () => {
           className="staked-kuji-legend text-white position-absolute"
           style={{ zIndex: "100" }}
         >
-          <div>
+          <div style={{ background: "rgba(39,41,61,0.5)"}}>
             <span>{Number(currentAtomMintedUsk / 1000).toFixed(2)}K</span>{" "}
             <span className="text-muted">of 1M</span>{" "}
             <span className="fw-bold">({Number(atomPercentage).toFixed(2)}%)</span>
@@ -77,6 +88,11 @@ const BlueMintedUskStackChart = () => {
             <span className="text-muted">of 1M</span>{" "}
             <span className="fw-bold">({Number(wethPercentage).toFixed(2)}%)</span>
             <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack3}}></i> wETH</span>
+            <br/>
+            <span>{Number(currentWbnbMintedUsk / 1000).toFixed(2)}K</span>{" "}
+            <span className="text-muted">of 1M</span>{" "}
+            <span className="fw-bold">({Number(wbnbPercentage).toFixed(2)}%)</span>
+            <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB</span>
           </div>
         </div>
       </div>
