@@ -45,7 +45,7 @@ const GenericAreaStackChart = (props) => {
     };
   }, [data]);
 
-  return <div ref={chartContainerRef}>{props.children}</div>;
+  return <div className={props.className} ref={chartContainerRef}>{props.children}</div>;
 };
 
 export default GenericAreaStackChart;

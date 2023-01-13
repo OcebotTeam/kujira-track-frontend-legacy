@@ -68,33 +68,50 @@ const BlueMintedUskStackChart = () => {
 
   return (
     <GenericAreaStackChart data={stakedUsk}>
-      <div className="position-relative">
-        <div
-          className="staked-kuji-legend text-white position-absolute"
-          style={{ zIndex: "100" }}
-        >
-          <div style={{ background: "rgba(39,41,61,0.5)"}}>
-            <span>{Number(currentAtomMintedUsk / 1000).toFixed(2)}K</span>{" "}
-            <span className="text-muted">of 1M</span>{" "}
-            <span className="fw-bold">({Number(atomPercentage).toFixed(2)}%)</span>
-            <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack1}}></i> Atom</span>
-            <br/>
-            <span>{Number(currentDotMintedUsk / 1000).toFixed(2)}K</span>{" "}
-            <span className="text-muted">of 1M</span>{" "}
-            <span className="fw-bold">({Number(dotPercentage).toFixed(2)}%)</span>
-            <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack2}}></i> DOT</span>
-            <br/>
-            <span>{Number(currentWethMintedUsk / 1000).toFixed(2)}K</span>{" "}
-            <span className="text-muted">of 1M</span>{" "}
-            <span className="fw-bold">({Number(wethPercentage).toFixed(2)}%)</span>
-            <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack3}}></i> wETH</span>
-            <br/>
-            <span>{Number(currentWbnbMintedUsk / 1000).toFixed(2)}K</span>{" "}
-            <span className="text-muted">of 1M</span>{" "}
-            <span className="fw-bold">({Number(wbnbPercentage).toFixed(2)}%)</span>
-            <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB</span>
-          </div>
+      <div
+        className="text-white"
+        style={{ zIndex: "100" }}
+      >
+        {/*<span>{Number(currentAtomMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
+        {/*<span className="text-muted">of 1M</span>{" "}*/}
+        {/*<span className="fw-bold">({Number(atomPercentage).toFixed(2)}%)</span>*/}
+        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack1}}></i> Atom</span>*/}
+        {/*<br/>*/}
+        {/*<span>{Number(currentDotMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
+        {/*<span className="text-muted">of 1M</span>{" "}*/}
+        {/*<span className="fw-bold">({Number(dotPercentage).toFixed(2)}%)</span>*/}
+        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack2}}></i> DOT</span>*/}
+        {/*<br/>*/}
+        {/*<span>{Number(currentWethMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
+        {/*<span className="text-muted">of 1M</span>{" "}*/}
+        {/*<span className="fw-bold">({Number(wethPercentage).toFixed(2)}%)</span>*/}
+        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack3}}></i> wETH</span>*/}
+        {/*<br/>*/}
+        {/*<span>{Number(currentWbnbMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
+        {/*<span className="text-muted">of 1M</span>{" "}*/}
+        {/*<span className="fw-bold">({Number(wbnbPercentage).toFixed(2)}%)</span>*/}
+        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB</span>*/}
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack1}}></i> Atom </span>
+          <span className="text-muted">({Number(atomPercentage).toFixed(2)}%)</span>
         </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack2}}></i> DOT </span>
+          <span className="text-muted">({Number(dotPercentage).toFixed(2)}%)</span>
+        </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack3}}></i> wETH </span>
+          <span className="text-muted">({Number(wethPercentage).toFixed(2)}%)</span>
+        </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB </span>
+          <span className="text-muted">({Number(wbnbPercentage).toFixed(2)}%)</span>
+        </div>
+
       </div>
     </GenericAreaStackChart>
   );

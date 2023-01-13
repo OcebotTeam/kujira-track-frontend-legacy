@@ -18,15 +18,13 @@ const BlueStakedKujiChart = () => {
 
   return (
     <GenericAreaChart data={stakedTokens}>
-      <div className="position-relative">
-        <div
-          className="staked-kuji-legend text-white position-absolute"
-          style={{ zIndex: "100" }}
-        >
-          <span>{Number(currentStake / 1000000).toFixed(2)}M</span>{" "}
-          <span className="text-muted">of 122.39M</span>{" "}
-          <span className="fw-bold">({Number(percentage).toFixed(2)}%)</span>
-        </div>
+      <div
+        className="text-white"
+        style={{ zIndex: "100" }}
+      >
+        <span>{Number(currentStake / 1000000).toFixed(2)}M</span>{" "}
+        <span className="text-muted">of 122.39M</span>{" "}
+        <span className="fw-bold">({Number(percentage).toFixed(2)}%)</span>
       </div>
     </GenericAreaChart>
   );
