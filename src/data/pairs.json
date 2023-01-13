@@ -101,6 +101,15 @@
   },
   "STRD_USK": {
     "contract": "kujira1cn922pcqrt4g2dr4va9vxk8h3w3jfxnxjqq2qp6zktjsehdzde6sz66um0"
+  },
+  "LOCAL_USK": {
+    "contract": "kujira1sse6a00arh9dalzsyrd3q825dsn2zmrag0u4qx8q0dyks4ftnxyqrj0xds"
+  },
+  "LP KUJI-ATOM (ATOM)": {
+    "contract": "kujira1gl8js9zn7h9u2h37fx7qg8xy65jrk9t4zpa6s7j5hdlanud2uwxshqq67m"
+  },
+  "LP KUJI-ATOM (KUJI)": {
+    "contract": "kujira1hs95lgvuy0p6jn4v7js5x8plfdqw867lsuh5xv6d2ua20jprkgesw2pujt"
   }
   
 }
