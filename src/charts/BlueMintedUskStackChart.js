@@ -16,11 +16,15 @@ const BlueMintedUskStackChart = () => {
   // wBNB
   const [wbnbPercentage, setWbnbPercentage] = useState(0);
   const [currentWbnbMintedUsk, setCurrentWbnbMintedUsk] = useState(0);
+  // LUNA
+  const [lunaPercentage, setLunaPercentage] = useState(0);
+  const [currentLunabMintedUsk, setCurrentLunaMintedUsk] = useState(0);
 
   const mintedUsk = MintedUskStack();
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
+      JSON.parse(JSON.stringify(values.LUNA)),
       JSON.parse(JSON.stringify(values.wBNB)),
       JSON.parse(JSON.stringify(values.wETH)),
       JSON.parse(JSON.stringify(values.DOT)),
@@ -48,68 +52,55 @@ const BlueMintedUskStackChart = () => {
   useEffect(() => {
     mintedUsk.then((values) => {
       // ATOM figures
-      const currentAtomMintedUsk = values.ATOM.at(-1).value;
       setCurrentAtomMintedUsk(values.ATOM.at(-1).value);
       setAtomPercentage((currentAtomMintedUsk / 10000));
       // DOT figures
-      const currentDotMintedUsk = values.DOT.at(-1).value;
       setCurrentDotMintedUsk(values.DOT.at(-1).value);
       setDotPercentage((currentDotMintedUsk / 10000));
       // wETH figures
-      const currentWethMintedUsk = values.wETH.at(-1).value;
       setCurrentWethMintedUsk(values.wETH.at(-1).value);
       setWethPercentage((currentWethMintedUsk / 10000));
       // wBNB figures
-      const currentWbnbMintedUsk = values.wBNB.at(-1).value;
       setCurrentWbnbMintedUsk(values.wBNB.at(-1).value);
       setWbnbPercentage((currentWbnbMintedUsk / 10000));
+      // LUNA figures
+      setCurrentLunaMintedUsk(values.LUNA.at(-1).value);
+      setLunaPercentage((currentLunabMintedUsk / 3000)); // 300k supply
     });
   });
 
   return (
     <GenericAreaStackChart data={stakedUsk}>
       <div
-        className="text-white"
+        className="text-white text-center"
         style={{ zIndex: "100" }}
       >
-        {/*<span>{Number(currentAtomMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
-        {/*<span className="text-muted">of 1M</span>{" "}*/}
-        {/*<span className="fw-bold">({Number(atomPercentage).toFixed(2)}%)</span>*/}
-        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack1}}></i> Atom</span>*/}
-        {/*<br/>*/}
-        {/*<span>{Number(currentDotMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
-        {/*<span className="text-muted">of 1M</span>{" "}*/}
-        {/*<span className="fw-bold">({Number(dotPercentage).toFixed(2)}%)</span>*/}
-        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack2}}></i> DOT</span>*/}
-        {/*<br/>*/}
-        {/*<span>{Number(currentWethMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
-        {/*<span className="text-muted">of 1M</span>{" "}*/}
-        {/*<span className="fw-bold">({Number(wethPercentage).toFixed(2)}%)</span>*/}
-        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack3}}></i> wETH</span>*/}
-        {/*<br/>*/}
-        {/*<span>{Number(currentWbnbMintedUsk / 1000).toFixed(2)}K</span>{" "}*/}
-        {/*<span className="text-muted">of 1M</span>{" "}*/}
-        {/*<span className="fw-bold">({Number(wbnbPercentage).toFixed(2)}%)</span>*/}
-        {/*<span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB</span>*/}
 
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack1}}></i> Atom </span>
-          <span className="text-muted">({Number(atomPercentage).toFixed(2)}%)</span>
+          <span className="text-muted">({Number(currentAtomMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack2}}></i> DOT </span>
-          <span className="text-muted">({Number(dotPercentage).toFixed(2)}%)</span>
+          <span className="text-muted">({Number(currentDotMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack3}}></i> wETH </span>
-          <span className="text-muted">({Number(wethPercentage).toFixed(2)}%)</span>
+          <span className="text-muted">({Number(currentWethMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
+
+        <br/>
 
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB </span>
-          <span className="text-muted">({Number(wbnbPercentage).toFixed(2)}%)</span>
+          <span className="text-muted">({Number(currentWbnbMintedUsk / 1000).toFixed(2)}K)</span>
+        </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack5}}></i> LUNA </span>
+          <span className="text-muted">({Number(currentLunabMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
       </div>

@@ -19,7 +19,16 @@ const GenericAreaStackChart = (props) => {
           priceFormat: {
             type: "volume",
           },
+          lastValueVisible: false,
+          priceLineVisible: false,
         });
+
+        if (counter === values.length) {
+          areaSeries.applyOptions({
+            lastValueVisible: true,
+            priceLineVisible: true,
+          })
+        }
 
         areaSeries.setData(values[series]);
         counter--;
