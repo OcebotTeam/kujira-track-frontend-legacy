@@ -6,6 +6,10 @@
     "contract": "kujira18v47nqmhvejx3vc498pantg8vr435xa0rt6x0m6kzhp6yuqmcp8s4x8j2c",
     "nominative": "ATOM_axlUSDC"
   },
+  "KUJI_LUNA": {
+    "contract": "kujira1xqhakgvn3jeqfade0z4aufer9xylx7ft45fgyhg6z75mauhkjwks9cucyq",
+    "nominative": "KUJI_axlUSDC"
+  },
   "ATOM_axlUSDC": {
     "contract": "kujira1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3sl8nek6"
   },
@@ -22,6 +26,9 @@
   },
   "LUNA_axlUSDC": {
     "contract": "kujira1yg8930mj8pk288lmkjex0qz85mj8wgtns5uzwyn2hs25pwdnw42skp0kur"
+  },
+  "LUNA_USK": {
+    "contract": "kujira1zz74gvmq6ss3pg5vgahvx47ugpfzr80qu75l97lf2ggdgxq04ddqxkdzey"
   },
   "OSMO_axlUSDC": {
     "contract": "kujira1aakfpghcanxtc45gpqlx8j3rq0zcpyf49qmhm9mdjrfx036h4z5sfmexun"
