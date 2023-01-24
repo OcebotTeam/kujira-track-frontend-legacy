@@ -146,7 +146,13 @@
   },  
   "wFTM_USK":{
    "contract": "kujira1ky9kv2m4dnykm90d0lj5089k4efttgfpx34zyvkklxnew48c522sggqjsg"
-  }
+  },
+   "gPAxG_axlUSDC":{
+    "contract": "kujira12p30cr4gstmp2yucwxtaq92turrzsxxar8upz3rhmfjxh6gdgk4s5vsyse"
+   },
+   "gPAxG_USK":{
+    "contract": "kujira1rtpn4nxkx7u5y4uf5lp4ywrhmnms07p8p8wc3pmw53hfv0lhyxdqlfhgrt"
+   }
   
   
 }
