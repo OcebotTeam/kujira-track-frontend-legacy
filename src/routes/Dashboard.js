@@ -99,11 +99,11 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col mb-3 mb-lg-4">
-          <PairDataTable />
-        </div>
-      </div>
+      //<div className="row">
+      //  <div className="col mb-3 mb-lg-4">
+      //    <PairDataTable />
+      //  </div>
+      //</div>
     </main>
   );
 };
