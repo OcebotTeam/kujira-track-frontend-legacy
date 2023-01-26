@@ -54,6 +54,40 @@ function Pair(ticker_id) {
   };
 
   /**
+   * Returns candle raw values from de API given a precision period. It might be cached.
+   * @param precision {TickPrecision}
+   * @param periods {number} amount of historic data in days
+   * @returns {Promise<any>}
+   */
+  this.candlesCachedRawValues = (precision, periods) => {
+    const toDate = new Date();
+    const fromDate = new Date();
+
+    toDate.setSeconds(0);
+    toDate.setMinutes(0);
+    fromDate.setSeconds(0);
+    fromDate.setMinutes(0);
+
+    fromDate.setDate(fromDate.getDate() - periods + 1);
+
+    let endpoint =
+        process.env.REACT_APP_API_BRIDGE_URL +
+        "/kbridge/cached/candles?contract=" +
+        Pairs[ticker_id].contract +
+        "&precision=" +
+        precision +
+        "&from=" +
+        dateToApiFormat(fromDate) +
+        "&to=" +
+        dateToApiFormat(toDate);
+
+    return fetch(endpoint)
+        .then((response) => response.json())
+        .then((json) => json.candles)
+        .catch((error) => console.log(error));
+  };
+
+  /**
    * Returns the current pair market price
    * @returns {Promise<Number>}
    */
@@ -135,7 +169,7 @@ function Pair(ticker_id) {
     if (nominativeTickerId !== undefined) {
       const nominativePair = new Pair(nominativeTickerId);
       return nominativePair.lastDayPrice().then((price) => {
-        return this.candlesRawValues(precision, periods).then((candles) => {
+        return this.candlesCachedRawValues(precision, periods).then((candles) => {
           return candles.map((candle) => {
                return {
               time: Math.floor(new Date(candle.bin) / 1000),
@@ -145,7 +179,7 @@ function Pair(ticker_id) {
         });
       });
     } else {
-      return this.candlesRawValues(precision, periods).then((candles) => {
+      return this.candlesCachedRawValues(precision, periods).then((candles) => {
         return candles.map((candle) => {
           return {
             time: Math.floor(new Date(candle.bin) / 1000),
