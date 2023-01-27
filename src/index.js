@@ -23,7 +23,7 @@ root.render(
       <Navbar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-       
+        <Route path="/volumes" element={<Volumes />} />
       </Routes>{" "}
 
       <Footer />
