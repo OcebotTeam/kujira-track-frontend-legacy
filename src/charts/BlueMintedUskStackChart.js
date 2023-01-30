@@ -19,11 +19,15 @@ const BlueMintedUskStackChart = () => {
   // LUNA
   const [lunaPercentage, setLunaPercentage] = useState(0);
   const [currentLunabMintedUsk, setCurrentLunaMintedUsk] = useState(0);
+  // gPAXG
+  const [gPaxgPercentage, setGpaxgPercentage] = useState(0);
+  const [currentGpaxgMintedUsk, setCurrentGpaxgMintedUsk] = useState(0);
 
   const mintedUsk = MintedUskStack();
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
+      JSON.parse(JSON.stringify(values.gPAXG)),
       JSON.parse(JSON.stringify(values.LUNA)),
       JSON.parse(JSON.stringify(values.wBNB)),
       JSON.parse(JSON.stringify(values.wETH)),
@@ -66,6 +70,9 @@ const BlueMintedUskStackChart = () => {
       // LUNA figures
       setCurrentLunaMintedUsk(values.LUNA.at(-1).value);
       setLunaPercentage((currentLunabMintedUsk / 3000)); // 300k supply
+      // gPAXG figures
+      setCurrentGpaxgMintedUsk(values.gPAXG.at(-1).value);
+      setGpaxgPercentage((currentGpaxgMintedUsk / 10000));
     });
   });
 
@@ -91,8 +98,6 @@ const BlueMintedUskStackChart = () => {
           <span className="text-muted">({Number(currentWethMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
-        <br/>
-
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack4}}></i> wBNB </span>
           <span className="text-muted">({Number(currentWbnbMintedUsk / 1000).toFixed(2)}K)</span>
@@ -101,6 +106,11 @@ const BlueMintedUskStackChart = () => {
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack5}}></i> LUNA </span>
           <span className="text-muted">({Number(currentLunabMintedUsk / 1000).toFixed(2)}K)</span>
+        </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack6}}></i> gPAXG </span>
+          <span className="text-muted">({Number(currentGpaxgMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
       </div>
