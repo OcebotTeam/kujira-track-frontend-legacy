@@ -60,10 +60,8 @@ const Volumes = () => {
         <div className="col mb-3 mb-lg-4">
           <div className="card bg-dark">
             <div className="card-body">
-              <h5 className="text-muted fw-light">Volume / Transactions (1D)</h5>
-              <h3 className="card-title text-white">
-                FIN accumulated volume
-              </h3>
+              <h5 className="text-muted fw-light">Volume(1D)</h5>
+              <h3 className="card-title text-white">FIN accumulated volume</h3>
               <FinTotalVolumeChart
                 precision={tickPrecision.day1}
                 period={365}

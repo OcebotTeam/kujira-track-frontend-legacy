@@ -2,7 +2,6 @@ import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
 import { Accumulated } from "../data/Accumulated";
 import InfoBar from "../components/dashboard/InfoBar";
-import PairDataTable from "../components/dashboard/PairDataTable";
 import GenericCandleStickChart from "../charts/GenericCandleStickChart";
 import GenericLineChart from "../charts/GenericLineChart";
 import GenericAreaChart from "../charts/GenericAreaChart";
@@ -11,7 +10,6 @@ import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
 import tickPrecision from "../data/TickPrecision";
 import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
-import BlueMintedUskChart from "../charts/BlueMintedUskChart";
 import BlueMintedUskStackChart from "../charts/BlueMintedUskStackChart";
 
 import kujiLogoImg from "../assets/tokens/kuji/logo.png";
@@ -49,8 +47,8 @@ const Dashboard = () => {
 
         <div className={twoColumnColClasses}>
           <Card
-            title="FIN total volume / transactions"
-            overTitle="Volume/Transactions (1D)"
+            title="FIN total volume"
+            overTitle="Volume (1D)"
           >
             <FinTotalVolumeChart precision={tickPrecision.day1} period={365} />
           </Card>
