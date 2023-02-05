@@ -156,5 +156,11 @@
   "gPAxG_USK": {
     "contract": "kujira1rtpn4nxkx7u5y4uf5lp4ywrhmnms07p8p8wc3pmw53hfv0lhyxdqlfhgrt",
     "priceMultiplier": 1000000000000
+  },  
+  "MARS_USK": {
+    "contract": "kujira1v8kh6mqxq7awcvl936xeyzv8fnmdkd3yxggvkyek5d0ecut4a6zs0larj2"
+  },  
+  "MARS_axlUSDC": {
+    "contract": "kujira149m52kn7nvsg5nftvv4fh85scsavpdfxp5nr7zasz97dum89dp5qevttd9"
   }
 }
