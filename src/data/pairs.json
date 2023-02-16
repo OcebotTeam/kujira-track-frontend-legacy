@@ -166,5 +166,9 @@
   "wTAO_USK": {
     "contract": "kujira1538ukswznmuek3hfv7mcxem9hjqz8sa4ypl2ul0zncu3tdgfvwmq8pxkwp",
     "priceMultiplier": 1000000000000
+  },
+  "wTAO_axlUSDC": {
+    "contract": "kujira17qp8g5n5wwelrsnfdakrv0p550nzg72agpcz5t0ea6thlqd300hquxljcc",
+    "priceMultiplier": 1000000000000
   }
 }
