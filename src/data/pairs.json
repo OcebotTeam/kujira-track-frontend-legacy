@@ -162,5 +162,9 @@
   },  
   "MARS_axlUSDC": {
     "contract": "kujira149m52kn7nvsg5nftvv4fh85scsavpdfxp5nr7zasz97dum89dp5qevttd9"
+  },
+  "wTAO_USK": {
+    "contract": "kujira1538ukswznmuek3hfv7mcxem9hjqz8sa4ypl2ul0zncu3tdgfvwmq8pxkwp",
+    "priceMultiplier": 1000000000000
   }
 }
