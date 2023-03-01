@@ -170,5 +170,38 @@
   "wTAO_axlUSDC": {
     "contract": "kujira17qp8g5n5wwelrsnfdakrv0p550nzg72agpcz5t0ea6thlqd300hquxljcc",
     "priceMultiplier": 1000000000000
+  },
+  "CNTO_USK": {
+    "contract": "kujira1642dp8q7gzm5g5csdz2k676rc5zqfka4hfnas9ffydffp0saspts0e9zgp"
+  },
+  "GRAV_USK": {
+    "contract": "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp"
+  },
+  "LINK_USK": {
+    "contract": "kujira12zjpumtfh88k6s2s8k4wks37ezr2c3zeha5xx6qpd65e5ehz50nq0afvrv",
+    "priceMultiplier": 1000000000000
+  },
+  "INJ_USK": {
+    "contract": "kujira1ddeadmhum3umygv84frhc87gl2grzjmx9x8fuhjts7zqwuc39xuq53w3d8"
+  },
+  "INJ_USK": {
+    "contract": "kujira1ddeadmhum3umygv84frhc87gl2grzjmx9x8fuhjts7zqwuc39xuq53w3d8"
+  },
+  "WHALE_USK": {
+    "contract": "kujira1x38mke7q0qut5lku4zrx7wgjrsj9jn3tffadegzzcsy9s5w5mdmqzzl0sn"
+  },
+  "KUJI_stATOM": {
+    "contract": "kujira1gvfjvm09gunj9qkygvzr93ld7hux9nwa9k2t8lug8g46p4x8vt0q3xhu06"
+  },
+  "KUJI_stATOM": {
+    "contract": "kujira1gvfjvm09gunj9qkygvzr93ld7hux9nwa9k2t8lug8g46p4x8vt0q3xhu06"
+  },
+  "KUJI_LOCAL": {
+    "contract": "kujira17v40udkwtm9tt2wt73ejj6xh9x4ts8at6zv6nhmusdj4x6ffnl2qpep73h"
+  },
+  "KUJI_stOSMO": {
+    "contract": "kujira16f84qasz2nw09cy25nlzxnzxyrnhvvygym74869y5q83pev9rhdsr7emra"
   }
+  
+  
 }
