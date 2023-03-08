@@ -22,11 +22,15 @@ const BlueMintedUskStackChart = () => {
   // gPAXG
   const [gPaxgPercentage, setGpaxgPercentage] = useState(0);
   const [currentGpaxgMintedUsk, setCurrentGpaxgMintedUsk] = useState(0);
+  // stATOM
+  const [stATOMPercentage, setStATOMPercentage] = useState(0);
+  const [currentStATOMMintedUsk, setCurrentStATOMMintedUsk] = useState(0);
 
   const mintedUsk = MintedUskStack();
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
+      JSON.parse(JSON.stringify(values.stATOM)),
       JSON.parse(JSON.stringify(values.gPAXG)),
       JSON.parse(JSON.stringify(values.LUNA)),
       JSON.parse(JSON.stringify(values.wBNB)),
@@ -73,6 +77,9 @@ const BlueMintedUskStackChart = () => {
       // gPAXG figures
       setCurrentGpaxgMintedUsk(values.gPAXG.at(-1).value);
       setGpaxgPercentage((currentGpaxgMintedUsk / 10000));
+      // stATOM figures
+      setCurrentStATOMMintedUsk(values.stATOM.at(-1).value);
+      setStATOMPercentage((currentStATOMMintedUsk / 10000));
     });
   });
 
@@ -111,6 +118,11 @@ const BlueMintedUskStackChart = () => {
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack6}}></i> gPAXG </span>
           <span className="text-muted">({Number(currentGpaxgMintedUsk / 1000).toFixed(2)}K)</span>
+        </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack7}}></i> stATOM </span>
+          <span className="text-muted">({Number(currentStATOMMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
       </div>
