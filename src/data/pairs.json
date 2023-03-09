@@ -201,6 +201,15 @@
   },
   "KUJI_stOSMO": {
     "contract": "kujira16f84qasz2nw09cy25nlzxnzxyrnhvvygym74869y5q83pev9rhdsr7emra"
+  },
+  "ACRE_USK": {
+    "contract": "kujira1zumrlzj7ffq0murckuzykgsvcn3xzyvn3e85fxjsymwyhezmkycqtq87zj"
+  },
+  "xASTRO_USK": {
+    "contract": "kujira1qwtjeaf0y6hn094gn3xprw7wknkl4egpkr7dqu3cljkev5ex4xfqf2h8uc"
+  },
+  "SWTH_USK": {
+    "contract": "kujira1aqnmhyu37ynf8pm0fedtykzf3clk25ecc0p23cce2d5dc59eteeqgrg6tv"
   }
   
   
