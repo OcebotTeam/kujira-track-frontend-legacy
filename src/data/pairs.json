@@ -216,6 +216,13 @@
   },
   "DVPN_USK": {
     "contract": "kujira1ullqzk95uh0derdqpp8e5f4ukdun00xdal486zmjeeqsfhefgd0qh0qndl"
+  },
+  "ROAR_USK": {
+    "contract": "kujira1ullqzk95uh0derdqpp8e5f4ukdun00xdal486zmjeeqsfhefgd0qh0qndl"
+  },
+  "ampKUJI_KUJI": {
+    "contract": "kujira1ullqzk95uh0derdqpp8e5f4ukdun00xdal486zmjeeqsfhefgd0qh0qndl",
+    "nominative": "KUJI_axlUSDC"
   }
   
   
