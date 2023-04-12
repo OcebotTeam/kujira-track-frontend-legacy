@@ -25,11 +25,15 @@ const BlueMintedUskStackChart = () => {
   // stATOM
   const [stATOMPercentage, setStATOMPercentage] = useState(0);
   const [currentStATOMMintedUsk, setCurrentStATOMMintedUsk] = useState(0);
+  // stOSMO
+  const [stOSMOPercentage, setStOSMOPercentage] = useState(0);
+  const [currentStOSMOMintedUsk, setCurrentStOSMOMintedUsk] = useState(0);
 
   const mintedUsk = MintedUskStack();
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
+      JSON.parse(JSON.stringify(values.stOSMO)),
       JSON.parse(JSON.stringify(values.stATOM)),
       JSON.parse(JSON.stringify(values.gPAXG)),
       JSON.parse(JSON.stringify(values.LUNA)),
@@ -80,6 +84,9 @@ const BlueMintedUskStackChart = () => {
       // stATOM figures
       setCurrentStATOMMintedUsk(values.stATOM.at(-1).value);
       setStATOMPercentage((currentStATOMMintedUsk / 10000));
+      // stOSMO figures
+      setCurrentStOSMOMintedUsk(values.stOSMO.at(-1).value);
+      setStOSMOPercentage((currentStOSMOMintedUsk / 10000));
     });
   });
 
@@ -123,6 +130,11 @@ const BlueMintedUskStackChart = () => {
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack7}}></i> stATOM </span>
           <span className="text-muted">({Number(currentStATOMMintedUsk / 1000).toFixed(2)}K)</span>
+        </div>
+
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack8}}></i> stOSMO </span>
+          <span className="text-muted">({Number(currentStOSMOMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
       </div>

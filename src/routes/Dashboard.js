@@ -24,7 +24,7 @@ const Dashboard = () => {
   );
 
   const wallets = Accumulated("wallets");
-  const totalTransactions = Accumulated("transactions");
+  const unmigratedTokens = Accumulated("unmigrated");
 
   const oneColumnColClasses = "col mb-3 mb-lg-4";
   const twoColumnColClasses = "col-lg-6 mb-3 mb-lg-4";
@@ -91,8 +91,8 @@ const Dashboard = () => {
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card title="Total transactions" overTitle="Evolution">
-            <GenericLineChart data={totalTransactions} />
+          <Card title="Unmigrated tokens" overTitle="Evolution">
+            <GenericLineChart data={unmigratedTokens} />
           </Card>
         </div>
       </div>
