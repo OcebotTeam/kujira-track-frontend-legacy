@@ -42,9 +42,6 @@
   "SHD_USK": {
     "contract": "kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz"
   },
-  "SCRT_USK": {
-    "contract": "kujira1rpxf55u22q2tly9y8rgdrjgx9p52sus7jugaevj3hdt0z7sgvkcsyrhrv0"
-  },
   "STARS_axlUSDC": {
     "contract": "kujira1jkte0pytr85qg0whmgux3vmz9ehmh82w40h8gaqeg435fnkyfxqq5m32qy"
   },
@@ -183,21 +180,21 @@
   },
   "INJ_USK": {
     "contract": "kujira1ddeadmhum3umygv84frhc87gl2grzjmx9x8fuhjts7zqwuc39xuq53w3d8"
-  }
+  },
   "WHALE_USK": {
     "contract": "kujira1x38mke7q0qut5lku4zrx7wgjrsj9jn3tffadegzzcsy9s5w5mdmqzzl0sn"
   },
   "KUJI_stATOM": {
-    "contract": "kujira1gvfjvm09gunj9qkygvzr93ld7hux9nwa9k2t8lug8g46p4x8vt0q3xhu06"
-  },
-  "KUJI_stATOM": {
-    "contract": "kujira1gvfjvm09gunj9qkygvzr93ld7hux9nwa9k2t8lug8g46p4x8vt0q3xhu06"
+    "contract": "kujira1gvfjvm09gunj9qkygvzr93ld7hux9nwa9k2t8lug8g46p4x8vt0q3xhu06",
+    "nominative": "stATOM_USK"
   },
   "KUJI_LOCAL": {
-    "contract": "kujira17v40udkwtm9tt2wt73ejj6xh9x4ts8at6zv6nhmusdj4x6ffnl2qpep73h"
+    "contract": "kujira17v40udkwtm9tt2wt73ejj6xh9x4ts8at6zv6nhmusdj4x6ffnl2qpep73h",
+    "nominative": "LOCAL_USK"
   },
   "KUJI_stOSMO": {
-    "contract": "kujira16f84qasz2nw09cy25nlzxnzxyrnhvvygym74869y5q83pev9rhdsr7emra"
+    "contract": "kujira16f84qasz2nw09cy25nlzxnzxyrnhvvygym74869y5q83pev9rhdsr7emra",
+    "nominative": "stOSMO_USK"
   },
   "ACRE_USK": {
     "contract": "kujira1zumrlzj7ffq0murckuzykgsvcn3xzyvn3e85fxjsymwyhezmkycqtq87zj"
@@ -260,30 +257,25 @@
   "SOMM_USK": {
     "contract": "kujira1wckallump2k4284pt5wqg63a8prr205y532ym3850l82k75yzems5mfnkj"
   },
-  "PEPE_wETH" {
+  "PEPE_wETH": {
     "contract": "kujira1538ukswznmuek3hfv7mcxem9hjqz8sa4ypl2ul0zncu3tdgfvwmq8pxkwp",
     "priceMultiplier": 1000000000000,
     "nominative": "wETH_axlUSDC"
   },
-    "stINJ_INJ" {
+  "stINJ_INJ": {
     "contract": "kujira1te7w4e9w0gqakaxhakqs2k2gqmtnfgx36qh9zadh2yxl750c369qfu7uxl",
     "nominative": "INJ_USK"
   },
-    "rATOM_ATOM" {
+  "rATOM_ATOM": {
     "contract": "kujira1ryul6unmsnjccsugtempgdtly3gsdtu8af44yt5sqf4zpkgg7vjqkpxjjx",
     "nominative": "ATOM_axlUSDC"
   },
-    "FRNZ_ATOM" {
+  "FRNZ_ATOM": {
     "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
     "nominative": "ATOM_axlUSDC"
   },    
-  "stOSMO_stATOM" {
+  "stOSMO_stATOM": {
     "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
     "nominative": "stATOM_USK"
   }
-  
-  
-  
-  
-  
 }
