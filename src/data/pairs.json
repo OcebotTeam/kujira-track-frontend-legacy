@@ -183,10 +183,7 @@
   },
   "INJ_USK": {
     "contract": "kujira1ddeadmhum3umygv84frhc87gl2grzjmx9x8fuhjts7zqwuc39xuq53w3d8"
-  },
-  "INJ_USK": {
-    "contract": "kujira1ddeadmhum3umygv84frhc87gl2grzjmx9x8fuhjts7zqwuc39xuq53w3d8"
-  },
+  }
   "WHALE_USK": {
     "contract": "kujira1x38mke7q0qut5lku4zrx7wgjrsj9jn3tffadegzzcsy9s5w5mdmqzzl0sn"
   },
@@ -223,10 +220,70 @@
   "ampKUJI_KUJI": {
     "contract": "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s",
     "nominative": "KUJI_axlUSDC"
-  },
+    },
   "MNTA_USK": {
     "contract": "kujira1mf4v3x3pkuthha5a4r9jd0slgulcxkucy4weuqsvx2n030twduzqewuznf"
-  }
+  },
+  "AKT_USK": {
+    "contract": "kujira1ppr63x265m0sgqdhl2k23t8hmfcgrar85rxgq45uvctksr8w8hzsqwwdcq"
+  } ,
+  "ARB_USK": {
+    "contract": "kujira1zf94p6srpmlk0d5p9pwpqqwztynd22mndqljqvral604k8jfcw4sw2y7kp"
+  },
+  "CRE_USK": {
+    "contract": "kujira1nu8kef49y0pdrkphtkt857tgtt0pe8nr8ms0pnp6lylrav9jq2asmjljhe"
+  },
+  "CRO_USK": {
+    "contract": "kujira10j648ftg2g8p5vhgsu5kzfh6d907vpkrn0a5l3qch479eqy2qssqm905c4"
+  },
+  "FLIX_USK": {
+    "contract": "kujira1uau4ctnpfze4qqljqgup3watfg9yvmkgr7gevzgv27g30yx56fvsr6dkqx"
+  },
+  "LUNC_USK": {
+    "contract": "kujira10lzmqlvey89gwd4jz8aq3s4xdllk2k56yj45cex9s86v8g7nkpmq24djj4"
+  },
+  "MNTL_USK": {
+    "contract": "kujira1vpvt27kwaasyfxyd9lkfu3xlm3axmayg40z8reas7l7nk659kcqsgywtdv"
+  },
+  "stOSMO_USK": {
+    "contract": "kujira1tnnvtvere0pwz0uupy4crl3dv6yszte9nqms4fwmfhj3e2yl477sa0frks"
+  } ,
+  "PLQ_USK": {
+    "contract": "kujira1q7p9wldxxvnqda4hx8w6caplqj33tfxne5efjamsp6ruhuk3knwqwjuhrn"
+  },
+  "RAC_USK": {
+    "contract": "kujira1kmw6fk5p7an27u8f3er08xrwvzlehczymgshkqxzfrxyrfleu2eqxykaln"
+  },
+  "REGEN_USK": {
+    "contract": "kujira1p2vmq7g8fghkeak0hz4qfgeskkd7zqp3vnj6m3sa0r6gp4dr37usmtgtej"
+  },
+  "SOMM_USK": {
+    "contract": "kujira1wckallump2k4284pt5wqg63a8prr205y532ym3850l82k75yzems5mfnkj"
+  },
+  "PEPE_wETH" {
+    "contract": "kujira1538ukswznmuek3hfv7mcxem9hjqz8sa4ypl2ul0zncu3tdgfvwmq8pxkwp",
+    "priceMultiplier": 1000000000000,
+    "nominative": "wETH_axlUSDC"
+  },
+    "stINJ_INJ" {
+    "contract": "kujira1te7w4e9w0gqakaxhakqs2k2gqmtnfgx36qh9zadh2yxl750c369qfu7uxl",
+    "nominative": "INJ_USK"
+  },
+    "rATOM_ATOM" {
+    "contract": "kujira1ryul6unmsnjccsugtempgdtly3gsdtu8af44yt5sqf4zpkgg7vjqkpxjjx",
+    "nominative": "ATOM_axlUSDC"
+  },
+    "FRNZ_ATOM" {
+    "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
+    "nominative": "ATOM_axlUSDC"
+  },    
+  "stOSMO_stATOM" {
+    "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
+    "nominative": "stATOM_USK"
+  },
+  
+  
+  
   
   
 }
