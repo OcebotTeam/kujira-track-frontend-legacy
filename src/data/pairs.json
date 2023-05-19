@@ -2,6 +2,9 @@
   "KUJI_axlUSDC": {
     "contract": "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
   },
+    "KUJI_USK": {
+    "contract": "kujira193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyq66wfrf"
+  },
   "KUJI_ATOM": {
     "contract": "kujira18v47nqmhvejx3vc498pantg8vr435xa0rt6x0m6kzhp6yuqmcp8s4x8j2c",
     "nominative": "ATOM_axlUSDC"
@@ -12,6 +15,22 @@
   },
   "ATOM_axlUSDC": {
     "contract": "kujira1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3sl8nek6"
+  },
+    "WINK_USK": {
+    "contract": "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
+  },
+    "ATOM_USK": {
+    "contract": "kujira1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqr2qp2j"
+  },
+  "axlUSDC_USK": {
+    "contract": "kujira1rwx6w02alc4kaz7xpyg3rlxpjl4g63x5jq292mkxgg65zqpn5llq202vh5"
+  },
+    "ampKUJI_KUJI": {
+    "contract": "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s",
+    "nominative": "KUJI_axlUSDC"
+    },
+  "MNTA_USK": {
+    "contract": "kujira1mf4v3x3pkuthha5a4r9jd0slgulcxkucy4weuqsvx2n030twduzqewuznf"
   },
   "ATOM_OSMO": {
     "contract": "kujira1hulx7cgvpfcvg83wk5h96sedqgn72n026w6nl47uht554xhvj9nsra5j5u",
@@ -71,12 +90,6 @@
   },
   "LOOP_axlUSDC": {
     "contract": "kujira10fqy0npt7djm8lg847v9rqlng88kqfdvl8tyt4ge204wf52sy68qwmj07l"
-  },
-  "ATOM_USK": {
-    "contract": "kujira1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqr2qp2j"
-  },
-  "axlUSDC_USK": {
-    "contract": "kujira1rwx6w02alc4kaz7xpyg3rlxpjl4g63x5jq292mkxgg65zqpn5llq202vh5"
   },
   "FURY_USK": {
     "contract": "kujira1v8lkqws3gd6npr0rdk9ch54amh9guas86r4u62jq27hee88lryfsxwrvlk"
@@ -214,13 +227,7 @@
   "ROAR_USK": {
     "contract": "kujira1vllmvr0ylegpgg34y727kmys4yy3kjjnwj8xt3j22mdc5u4z7egs5d0sg8"
   },
-  "ampKUJI_KUJI": {
-    "contract": "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s",
-    "nominative": "KUJI_axlUSDC"
-    },
-  "MNTA_USK": {
-    "contract": "kujira1mf4v3x3pkuthha5a4r9jd0slgulcxkucy4weuqsvx2n030twduzqewuznf"
-  },
+
   "AKT_USK": {
     "contract": "kujira1ppr63x265m0sgqdhl2k23t8hmfcgrar85rxgq45uvctksr8w8hzsqwwdcq"
   } ,
@@ -272,5 +279,9 @@
   "stOSMO_stATOM": {
     "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
     "nominative": "stATOM_USK"
+  }
+  ,    
+  "WINK_USK": {
+    "contract": "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
   }
 }
