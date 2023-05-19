@@ -194,18 +194,6 @@
   "WHALE_USK": {
     "contract": "kujira1x38mke7q0qut5lku4zrx7wgjrsj9jn3tffadegzzcsy9s5w5mdmqzzl0sn"
   },
-  "KUJI_stATOM": {
-    "contract": "kujira1gvfjvm09gunj9qkygvzr93ld7hux9nwa9k2t8lug8g46p4x8vt0q3xhu06",
-    "nominative": "stATOM_USK"
-  },
-  "KUJI_LOCAL": {
-    "contract": "kujira17v40udkwtm9tt2wt73ejj6xh9x4ts8at6zv6nhmusdj4x6ffnl2qpep73h",
-    "nominative": "LOCAL_USK"
-  },
-  "KUJI_stOSMO": {
-    "contract": "kujira16f84qasz2nw09cy25nlzxnzxyrnhvvygym74869y5q83pev9rhdsr7emra",
-    "nominative": "stOSMO_USK"
-  },
   "ACRE_USK": {
     "contract": "kujira1zumrlzj7ffq0murckuzykgsvcn3xzyvn3e85fxjsymwyhezmkycqtq87zj"
   },
@@ -224,7 +212,6 @@
   "ROAR_USK": {
     "contract": "kujira1vllmvr0ylegpgg34y727kmys4yy3kjjnwj8xt3j22mdc5u4z7egs5d0sg8"
   },
-
   "AKT_USK": {
     "contract": "kujira1ppr63x265m0sgqdhl2k23t8hmfcgrar85rxgq45uvctksr8w8hzsqwwdcq"
   } ,
@@ -260,21 +247,5 @@
   },
   "SOMM_USK": {
     "contract": "kujira1wckallump2k4284pt5wqg63a8prr205y532ym3850l82k75yzems5mfnkj"
-  },
-  "stINJ_INJ": {
-    "contract": "kujira1te7w4e9w0gqakaxhakqs2k2gqmtnfgx36qh9zadh2yxl750c369qfu7uxl",
-    "nominative": "INJ_USK"
-  },
-  "rATOM_ATOM": {
-    "contract": "kujira1ryul6unmsnjccsugtempgdtly3gsdtu8af44yt5sqf4zpkgg7vjqkpxjjx",
-    "nominative": "ATOM_axlUSDC"
-  },
-  "FRNZ_ATOM": {
-    "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
-    "nominative": "ATOM_axlUSDC"
-  },    
-  "stOSMO_stATOM": {
-    "contract": "kujira1e8z7d334ngww7lnqaczlcrjpwg9hc5ggcptkk7nvc7ld4tem6dgsm9h336",
-    "nominative": "stATOM_USK"
   }
 }
