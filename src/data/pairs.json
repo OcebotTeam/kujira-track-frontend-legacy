@@ -32,6 +32,9 @@
   "MNTA_USK": {
     "contract": "kujira1mf4v3x3pkuthha5a4r9jd0slgulcxkucy4weuqsvx2n030twduzqewuznf"
   },
+  "MNTA_axlUSDC": {
+    "contract": "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
+  },
   "ATOM_OSMO": {
     "contract": "kujira1hulx7cgvpfcvg83wk5h96sedqgn72n026w6nl47uht554xhvj9nsra5j5u",
     "nominative": "OSMO_axlUSDC"
