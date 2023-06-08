@@ -36,7 +36,7 @@ const GenericAreaStackChart = (props) => {
 
       // Prevent gaps in desktop when there is no enough historic values.
       if (document.body.clientWidth >= 768 && values.length < 80) {
-        chart.timeScale().fitContent();
+        //chart.timeScale().fitContent();
       }
     });
 

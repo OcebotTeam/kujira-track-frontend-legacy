@@ -26,6 +26,7 @@ const BlueStakedKujiChart = () => {
         <span className="text-muted">of 117.02M</span>{" "}
         <span className="fw-bold">({Number(percentage).toFixed(2)}%)</span>
         <br/><br/>
+        <br/>
       </div>
     </GenericAreaChart>
   );

@@ -28,11 +28,15 @@ const BlueMintedUskStackChart = () => {
   // stOSMO
   const [stOSMOPercentage, setStOSMOPercentage] = useState(0);
   const [currentStOSMOMintedUsk, setCurrentStOSMOMintedUsk] = useState(0);
+  // ARBITRUM
+  const [arbPercentage, setArbPercentage] = useState(0);
+  const [currentArbMintedUsk, setCurrentArbMintedUsk] = useState(0);
 
   const mintedUsk = MintedUskStack();
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
+      JSON.parse(JSON.stringify(values.ARB)),
       JSON.parse(JSON.stringify(values.stOSMO)),
       JSON.parse(JSON.stringify(values.stATOM)),
       JSON.parse(JSON.stringify(values.gPAXG)),
@@ -87,6 +91,9 @@ const BlueMintedUskStackChart = () => {
       // stOSMO figures
       setCurrentStOSMOMintedUsk(values.stOSMO.at(-1).value);
       setStOSMOPercentage((currentStOSMOMintedUsk / 10000));
+      // stOSMO figures
+      setCurrentArbMintedUsk(values.ARB.at(-1).value);
+      setArbPercentage((currentArbMintedUsk / 10000));
     });
   });
 
@@ -135,6 +142,10 @@ const BlueMintedUskStackChart = () => {
         <div className="d-inline-block">
           <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack8}}></i> stOSMO </span>
           <span className="text-muted">({Number(currentStOSMOMintedUsk / 1000).toFixed(2)}K)</span>
+        </div>
+        <div className="d-inline-block">
+          <span className="ms-2"><i className="bi bi-circle-fill" style={{ color: areaStackColors.stack1}}></i> ARB </span>
+          <span className="text-muted">({Number(currentArbMintedUsk / 1000).toFixed(2)}K)</span>
         </div>
 
       </div>
