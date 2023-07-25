@@ -163,17 +163,21 @@ function Pair(ticker_id) {
    * @returns {Promise<Array>}
    */
   this.volumesChartValues = (precision, periods) => {
-    const divider = 1000000;
     const nominativeTickerId = Pairs[ticker_id].nominative;
+    const ethDivider = Pairs[ticker_id].ethDivider;
+    const divider = (ethDivider!==undefined) ? 1000000000000000000 : 1000000;
 
     if (nominativeTickerId !== undefined) {
       const nominativePair = new Pair(nominativeTickerId);
+      console.log(divider);
+
       return nominativePair.lastDayPrice().then((price) => {
         return this.candlesCachedRawValues(precision, periods).then((candles) => {
           return candles.map((candle) => {
                return {
               time: Math.floor(new Date(candle.bin) / 1000),
-              value: Math.floor(candle.volume / divider * price)
+              value: Math.floor(candle.volume / divider * price),
+              
             };
           });
         });
