@@ -39,7 +39,7 @@ const Navbar = () => {
             <li className="nav-item text-center text-lg-start">
               <a
                 className="nav-link"
-                href="https://twitter.com/ocebotKuji"
+                href="https://twitter.com/TeamOcebot"
                 target="_blank"
                 rel="noreferrer"
               >
