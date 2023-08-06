@@ -45,11 +45,16 @@
   },  
   "wstETH_MNTA": {
     "contract": "kujira1hf44at7dqewrn3ssa392d9p8nh5mr538u59gqsukdza35663hlestqr29e",
-    "nominative": "MNTA_axlUSDC"  },
+    "nominative": "MNTA_axlUSDC"  
+    },
   "STARS_MNTA": {
     "contract": "kujira1hsdzhyvuc2z3f8d3yae84uk62d69vk68vxgudkun7gccz6hvrvfq0vx6fd",
-    "nominative": "MNTA_axlUSDC"  },
-    
+    "nominative": "MNTA_axlUSDC"  
+    },
+  "wBTC_MNTA": {
+    "contract": "kujira1y50nul39ql5sf42p67nrsy9j0luly2mvaxmlkmx6888pnzw66k6qc0gku9",
+    "nominative": "MNTA_axlUSDC"  
+    },
   "wstETH_wETH": {
     "contract": "kujira1ehwsdvgs3chpxuexktymjmmjj68m3h4q67p9vjj9rrgjqycc3gtsfzej24",
     "nominative": "wETH_axlUSDC",
