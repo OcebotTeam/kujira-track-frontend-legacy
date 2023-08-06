@@ -29,6 +29,10 @@
     "contract": "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s",
     "nominative": "KUJI_axlUSDC"
     },
+ "wETH_KUJI": {
+    "contract": "kujira1zdf0zjz8grfhhe2x06k8f8xpnv04y90w06f4py7fjml4nmukn3yswk3ugc",
+    "nominative": "KUJI_axlUSDC"
+    },    
   "MNTA_KUJI": {
     "contract": "kujira1nkgq8xl4flsau7v3vphr3ayc7tprgazg6pzjmq8plkr76v385fhsx26qfa",
     "nominative": "KUJI_axlUSDC"
