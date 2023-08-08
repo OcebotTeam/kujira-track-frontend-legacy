@@ -59,6 +59,10 @@
     "contract": "kujira1y50nul39ql5sf42p67nrsy9j0luly2mvaxmlkmx6888pnzw66k6qc0gku9",
     "nominative": "MNTA_axlUSDC"  
     },
+  "SHD_MNTA": {
+    "contract": "kujira14u8ynhj7d8h2379yqj5q2ma0xxpvfjlrpauhzxgnj40ejq953mlsugux8d",
+    "nominative": "MNTA_axlUSDC"  
+    },
   "wstETH_wETH": {
     "contract": "kujira1ehwsdvgs3chpxuexktymjmmjj68m3h4q67p9vjj9rrgjqycc3gtsfzej24",
     "nominative": "wETH_axlUSDC",
