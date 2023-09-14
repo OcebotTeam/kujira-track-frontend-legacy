@@ -2,6 +2,9 @@
   "KUJI_axlUSDC": {
     "contract": "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
   },
+  "KUJI_USDC":{
+    "contract": "kujira1pw96huy6z02uk8hdpruk6g8u700dp8yxjhp46c24rwkzay2lfd3quqdum5"
+  },
     "KUJI_USK": {
     "contract": "kujira193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyq66wfrf"
   },
@@ -24,6 +27,9 @@
   },
   "axlUSDC_USK": {
     "contract": "kujira1rwx6w02alc4kaz7xpyg3rlxpjl4g63x5jq292mkxgg65zqpn5llq202vh5"
+  },
+  "axlUSDC_USDC": {
+    "contract": "kujira1zg4e37hz5hzlf8kmcaxjf85nyevk3qr2dp307lafdgst2928rghqed59ed"
   },
   "ampKUJI_KUJI": {
     "contract": "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s",
