@@ -10,7 +10,8 @@ import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
 import tickPrecision from "../data/TickPrecision";
 import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
-import BlueMintedUskStackChart from "../charts/BlueMintedUskStackChart";
+import BlueMintedUskChart from "../charts/BlueMintedUskChart";
+import BlueMarginUskChart from "../charts/BlueMarginUskChart";
 
 import kujiLogoImg from "../assets/tokens/kuji/logo.png";
 import uskLogoImg from "../assets/tokens/usk/logo.png";
@@ -78,7 +79,7 @@ const Dashboard = () => {
             overTitle="Evolution"
             imageTitle={uskLogoImg}
           >
-            <BlueMintedUskStackChart />
+            <BlueMintedUskChart />
           </Card>
         </div>
       </div>
@@ -86,13 +87,24 @@ const Dashboard = () => {
       <div className="row">
         <div className={twoColumnColClasses}>
           <Card title="Wallets" overTitle="Evolution">
-            <GenericAreaChart data={wallets} />
+            <GenericAreaChart data={wallets}>
+            <div
+              className="text-muted fst-italic"
+              style={{ zIndex: "100" }}
+            >
+              Total KUJIRA addresses
+            </div>
+            </GenericAreaChart>
           </Card>
         </div>
 
         <div className={twoColumnColClasses}>
-          <Card title="Unmigrated tokens" overTitle="Evolution">
-            <GenericLineChart data={unmigratedTokens} />
+          <Card
+            title="Margin USK"
+            overTitle="Evolution"
+            imageTitle={uskLogoImg}
+          >
+            <BlueMarginUskChart />
           </Card>
         </div>
       </div>

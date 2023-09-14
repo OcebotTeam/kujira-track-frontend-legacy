@@ -169,7 +169,6 @@ function Pair(ticker_id) {
 
     if (nominativeTickerId !== undefined) {
       const nominativePair = new Pair(nominativeTickerId);
-      console.log(divider);
 
       return nominativePair.lastDayPrice().then((price) => {
         return this.candlesCachedRawValues(precision, periods).then((candles) => {

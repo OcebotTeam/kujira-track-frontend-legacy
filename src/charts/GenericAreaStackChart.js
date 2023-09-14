@@ -10,34 +10,16 @@ const GenericAreaStackChart = (props) => {
     const chart = baseChart(chartContainerRef);
 
     data.then((values) => {
-      let counter = values.length;
-      for (const series in values) {
-        const areaSeries = chart.addAreaSeries({
-          lineColor: areaStackColors["stack" + counter],
-          topColor: areaStackColors["stack" + counter],
-          bottomColor: areaStackColors["stack" + counter],
-          priceFormat: {
-            type: "volume",
-          },
-          lastValueVisible: false,
-          priceLineVisible: false,
-        });
+      const areaSeries = chart.addAreaSeries({
+        lineColor: areaStackColors["stack1"],
+        topColor: areaStackColors["stack1"],
+        bottomColor: areaStackColors["stack1"],
+        priceFormat: {
+          type: "volume",
+        },
+      });
 
-        if (counter === values.length) {
-          areaSeries.applyOptions({
-            lastValueVisible: true,
-            priceLineVisible: true,
-          })
-        }
-
-        areaSeries.setData(values[series]);
-        counter--;
-      }
-
-      // Prevent gaps in desktop when there is no enough historic values.
-      if (document.body.clientWidth >= 768 && values.length < 80) {
-        //chart.timeScale().fitContent();
-      }
+      areaSeries.setData(values);
     });
 
     const handleResize = () => {

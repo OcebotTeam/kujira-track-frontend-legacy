@@ -50,6 +50,44 @@ const VolumeChart = (props) => {
 
       histogramSeries.setData(Object.values(compoundVolumes));
 
+      
+      // ********* AVERAGE DATA *********
+
+      var series = chart.addLineSeries({
+        color: 'rgb(0, 120, 255)',
+        lineWidth: 2,
+        crosshairMarkerVisible: false,
+        lastValueVisible: false,
+        priceLineVisible: false,
+      });
+      
+      var minimumPrice = compoundVolumes[0].value;
+	    var maximumPrice = minimumPrice;
+
+      for(var i = 1; i < compoundVolumes.length; i++) {
+        var price = compoundVolumes[i].value;
+        if (price > maximumPrice) {
+          maximumPrice = price;
+        }
+        if (price < minimumPrice) {
+          minimumPrice = price;
+        }
+      }
+
+      var avgPrice = (maximumPrice + minimumPrice) / 2;
+
+      var avgPriceLine = {
+        price: avgPrice,
+        color: '#be1238',
+        lineWidth: 2,
+        //lineStyle: LightweightCharts.LineStyle.Solid,
+        axisLabelVisible: true,
+        title: 'average price',
+      };
+
+      series.createPriceLine(avgPriceLine);
+
+
       // ********* TRANSACTIONS DATA *********
 
       const totalTransactions = Accumulated("transactions");
