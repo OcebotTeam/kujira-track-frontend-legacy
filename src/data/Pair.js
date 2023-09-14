@@ -170,13 +170,18 @@ function Pair(ticker_id) {
     if (nominativeTickerId !== undefined) {
       const nominativePair = new Pair(nominativeTickerId);
 
-      return nominativePair.lastDayPrice().then((price) => {
-        return this.candlesCachedRawValues(precision, periods).then((candles) => {
-          return candles.map((candle) => {
-               return {
+      return this.candlesCachedRawValues(precision, periods).then((candles) => {
+        return nominativePair.candlesCachedRawValues(precision, periods).then((nomCandles) => {
+          let peridod = nomCandles.length - 1;
+          return candles.toReversed().map((candle) => {
+            let nomPrice = 0;
+            if (typeof nomCandles[peridod] !== 'undefined') {
+              nomPrice = nomCandles[peridod].close ?? 0;
+            }
+            peridod--;
+            return {
               time: Math.floor(new Date(candle.bin) / 1000),
-              value: Math.floor(candle.volume / divider * price),
-              
+              value: Math.floor(candle.volume / divider * nomPrice),  
             };
           });
         });
