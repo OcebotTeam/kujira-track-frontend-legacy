@@ -9,6 +9,25 @@ const VolumeChart = (props) => {
   const { precision, period } = props;
   const chartContainerRef = useRef();
 
+  function calculateSMA(data, count) {
+    data = Object.values(data)
+    var avg = function(data) {
+      var sum = 0;
+      for (var i = 0; i < data.length; i++) {
+         sum += data[i].value;
+      }
+      return sum / data.length;
+    };
+
+    var result = [];
+
+    for (var i=count - 1, len=data.length; i < len; i++){
+      var val = avg(data.slice(i - count + 1, i));
+      result.push({ time: data[i].time, value: val});
+    }
+    return result;
+  }
+
   useEffect(() => {
     const chart = baseChart(chartContainerRef);
 
@@ -49,6 +68,15 @@ const VolumeChart = (props) => {
       });
 
       histogramSeries.setData(Object.values(compoundVolumes));
+
+      // **** SMA
+
+      var smaData = calculateSMA(compoundVolumes, 30);
+      var smaLine = chart.addLineSeries({
+        color: 'rgba(96, 251, 208, 1)',
+        lineWidth: 2,
+      });
+      smaLine.setData(smaData);
 
       // ********* TRANSACTIONS DATA *********
 
