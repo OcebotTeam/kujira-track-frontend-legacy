@@ -74,6 +74,12 @@
     "nominative": "wETH_axlUSDC",
     "ethDivider": "1"
     },
+  "NTRN_axlUSDC": {
+    "contract": "kujira1kt0jxlr5fkx3xepymxav5c3h8sjnmutp3za2e6r5k9pgsta34trq8emzqj"
+  },
+    "NTRN_USK": {
+    "contract": "kujira18vzzgwgc4c7mehenjllxvsnydg3gch0a63pedxl4ldrr6gexvyfqk7kupd"
+  },
 
   "ATOM_OSMO": {
     "contract": "kujira1hulx7cgvpfcvg83wk5h96sedqgn72n026w6nl47uht554xhvj9nsra5j5u",
