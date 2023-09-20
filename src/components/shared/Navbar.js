@@ -37,6 +37,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item text-center text-lg-start">
+              <NavLink className="nav-link" aria-current="page" to="/manta">
+                Manta
+              </NavLink>
+            </li>
+            <li className="nav-item text-center text-lg-start">
               <a
                 className="nav-link"
                 href="https://twitter.com/TeamOcebot"

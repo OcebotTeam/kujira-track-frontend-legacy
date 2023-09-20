@@ -175,18 +175,22 @@ function Pair(ticker_id) {
           let peridod = nomCandles.length - 1;
           return candles.toReversed().map((candle) => {
             let nomPrice = 0;
+
             if (typeof nomCandles[peridod] !== 'undefined') {
               nomPrice = nomCandles[peridod].close ?? 0;
             }
             peridod--;
-            return {
+
+            const result = {
               time: Math.floor(new Date(candle.bin) / 1000),
-              value: Math.floor(candle.volume / divider * nomPrice),  
+              value: Math.floor(candle.volume / divider * nomPrice),
             };
-          });
+            return result;
+          }).toReversed();
         });
       });
-    } else {
+    }
+    else {
       return this.candlesCachedRawValues(precision, periods).then((candles) => {
         return candles.map((candle) => {
           return {

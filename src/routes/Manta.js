@@ -1,0 +1,75 @@
+import Pair from "../data/Pair";
+import TickPrecision from "../data/TickPrecision";
+import { Accumulated } from "../data/Accumulated";
+import InfoBar from "../components/dashboard/InfoBar";
+import GenericCandleStickChart from "../charts/GenericCandleStickChart";
+import GenericAreaChart from "../charts/GenericAreaChart";
+import { colors } from "../variables/variables";
+import MantaTotalVolumeChart from "../charts/MantaTotalVolumeChart";
+import tickPrecision from "../data/TickPrecision";
+import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
+import Card from "../components/shared/Card";
+import BlueMintedUskChart from "../charts/BlueMintedUskChart";
+import BlueMarginUskChart from "../charts/BlueMarginUskChart";
+
+import kujiLogoImg from "../assets/tokens/kuji/logo.png";
+import uskLogoImg from "../assets/tokens/usk/logo.png";
+
+const Manta = () => {
+  const MntaUsdcPair = new Pair("MNTA_axlUSDC");
+
+  const MntaUsdcCandles = MntaUsdcPair.candlesChartValues(
+    TickPrecision.day1,
+    100
+  );
+
+
+  const oneColumnColClasses = "col mb-3 mb-lg-4";
+  const twoColumnColClasses = "col-lg-6 mb-3 mb-lg-4";
+
+  return (
+    <main className="container py-5">
+      <h1
+        className="mb-3 fs-2 fw-bold text-uppercase"
+        style={{ color: colors.bgLight }}
+      >
+        Dashboard
+      </h1>
+
+      <div className="row">
+        <div className={twoColumnColClasses}>
+          <Card title="MNTA/axlUSDC" overTitle="Price (1D)">
+            <GenericCandleStickChart data={MntaUsdcCandles} />
+          </Card>
+        </div>
+
+        <div className={twoColumnColClasses}>
+          <Card
+            title="MNTA pairs total volume"
+            overTitle="Volume (1D) / SMA (30)"
+          >
+            <MantaTotalVolumeChart precision={tickPrecision.day1} period={365} />
+          </Card>
+        </div>
+      </div>
+
+
+      <div className="row">
+        <div className={twoColumnColClasses}>
+          <Card
+            title="Staked KUJI"
+            overTitle="Evolution"
+            imageTitle={kujiLogoImg}
+          >
+            <BlueStakedKujiChart />
+          </Card>
+        </div>
+    </div>
+
+ 
+
+    </main>
+  );
+};
+
+export default Manta;

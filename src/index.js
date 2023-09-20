@@ -11,6 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 import Navbar from "./components/shared/Navbar";
 import Dashboard from "./routes/Dashboard";
 import Volumes from "./routes/Volumes";
+import Manta from "./routes/Manta";
 import Footer from "./components/shared/Footer";
 import CookieConsent from "react-cookie-consent";
 import { colors } from "./variables/variables";
@@ -24,6 +25,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/volumes" element={<Volumes />} />
+        <Route path="/manta" element={<Manta />} />
+
       </Routes>{" "}
 
       <Footer />
