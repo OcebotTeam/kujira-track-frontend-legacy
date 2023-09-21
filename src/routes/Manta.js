@@ -39,7 +39,7 @@ const Manta = () => {
 
         <div className={twoColumnColClasses}>
           <Card
-            title="MANTA total volume"
+            title="MNTA pairs total volume"
             overTitle="Volume (1D) / SMA (30)"
           >
             <MantaTotalVolumeChart precision={tickPrecision.day1} period={365} />
