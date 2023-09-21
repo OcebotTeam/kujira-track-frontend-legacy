@@ -1,19 +1,12 @@
 import Pair from "../data/Pair";
 import TickPrecision from "../data/TickPrecision";
-import { Accumulated } from "../data/Accumulated";
-import InfoBar from "../components/dashboard/InfoBar";
 import GenericCandleStickChart from "../charts/GenericCandleStickChart";
-import GenericAreaChart from "../charts/GenericAreaChart";
 import { colors } from "../variables/variables";
 import MantaTotalVolumeChart from "../charts/MantaTotalVolumeChart";
 import tickPrecision from "../data/TickPrecision";
-import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
-import BlueMintedUskChart from "../charts/BlueMintedUskChart";
-import BlueMarginUskChart from "../charts/BlueMarginUskChart";
 
-import kujiLogoImg from "../assets/tokens/kuji/logo.png";
-import uskLogoImg from "../assets/tokens/usk/logo.png";
+import mantaLogoImg from "../assets/tools/logo_manta.png";
 
 const Manta = () => {
   const MntaUsdcPair = new Pair("MNTA_axlUSDC");
@@ -23,18 +16,19 @@ const Manta = () => {
     100
   );
 
-
-  const oneColumnColClasses = "col mb-3 mb-lg-4";
   const twoColumnColClasses = "col-lg-6 mb-3 mb-lg-4";
 
   return (
     <main className="container py-5">
-      <h1
-        className="mb-3 fs-2 fw-bold text-uppercase"
-        style={{ color: colors.bgLight }}
-      >
-        Dashboard
-      </h1>
+
+      <div className="row mb-3 fs-2 fw-bold" style={{ color: colors.title }}>
+        <div className="col">
+          <div className="d-flex align-items-center justify-content-lg-start justify-content-center">
+            <img src={mantaLogoImg} alt="KUJIRA Track" height="40" className="me-3" />
+            <span>MANTA Metrics</span>
+          </div>
+        </div>
+      </div>
 
       <div className="row">
         <div className={twoColumnColClasses}>
@@ -52,21 +46,6 @@ const Manta = () => {
           </Card>
         </div>
       </div>
-
-
-      <div className="row">
-        <div className={twoColumnColClasses}>
-          <Card
-            title="Staked KUJI"
-            overTitle="Evolution"
-            imageTitle={kujiLogoImg}
-          >
-            <BlueStakedKujiChart />
-          </Card>
-        </div>
-    </div>
-
- 
 
     </main>
   );

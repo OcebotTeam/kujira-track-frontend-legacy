@@ -34,7 +34,7 @@ const Dashboard = () => {
     <main className="container py-5">
       <h1
         className="mb-3 fs-2 fw-bold text-uppercase"
-        style={{ color: colors.bgLight }}
+        style={{ color: colors.title }}
       >
         Dashboard
       </h1>

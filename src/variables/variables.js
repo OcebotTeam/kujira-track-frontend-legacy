@@ -10,6 +10,10 @@ const colors = {
 
   bgDark: "#1e1e2f",
   bgLight: "#27293d",
+
+  title: "#ffffff1a",
+
+  mntaSecondary: "#df72fc"
 };
 
 const areaStackColors = {

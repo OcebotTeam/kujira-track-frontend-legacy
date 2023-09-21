@@ -5,8 +5,10 @@ import FinVolumeChart from "../charts/FinSingleVolumeChart";
 import VolumesInfoBar from "../components/volumes/VolumesInfoBar";
 import { useEffect, useState } from "react";
 import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
+import finLogoImg from "../assets/tools/logo_fin.png";
 
-const Volumes = () => {
+
+const Fin = () => {
   const [filter, setFilter] = useState("");
   const [charts, setCharts] = useState([]);
 
@@ -43,12 +45,15 @@ const Volumes = () => {
 
   return (
     <main className="container py-5">
-      <h1
-        className="mb-3 fs-2 fw-bold text-uppercase"
-        style={{ color: colors.bgLight }}
-      >
-        Volumes
-      </h1>
+
+      <div className="row mb-3 fs-2 fw-bold" style={{ color: colors.title }}>
+        <div className="col">
+          <div className="d-flex align-items-center justify-content-lg-start justify-content-center">
+            <img src={finLogoImg} alt="KUJIRA Track" height="40" className="me-3" />
+            <span>FIN Metrics</span>
+          </div>
+        </div>
+      </div>
 
       <div className="row">
         <div className="col mb-3 mb-lg-4">
@@ -93,4 +98,4 @@ const Volumes = () => {
   );
 };
 
-export default Volumes;
+export default Fin;

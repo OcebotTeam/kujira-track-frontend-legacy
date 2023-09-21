@@ -3,15 +3,15 @@ import { colors } from "../variables/variables";
 import baseChart from "./BaseChart";
 
 const GenericCandleStickChart = (props) => {
-  const { data } = props;
+  const { data, upColor } = props;
   const chartContainerRef = useRef();
 
   useEffect(() => {
     const chart = baseChart(chartContainerRef);
     const barSeries = chart.addCandlestickSeries({
-      upColor: colors.teal,
+      upColor: upColor ?? colors.teal,
       downColor: colors.blue,
-      wickUpColor: colors.teal,
+      wickUpColor: upColor ?? colors.teal,
       wickDownColor: colors.blue,
       borderVisible: false
     });

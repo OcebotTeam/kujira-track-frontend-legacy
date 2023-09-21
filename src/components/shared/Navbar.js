@@ -32,13 +32,13 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item text-center text-lg-start">
-              <NavLink className="nav-link" aria-current="page" to="/volumes">
-                Volumes
+              <NavLink className="nav-link" aria-current="page" to="/fin">
+                FIN
               </NavLink>
             </li>
             <li className="nav-item text-center text-lg-start">
               <NavLink className="nav-link" aria-current="page" to="/manta">
-                Manta
+                MANTA
               </NavLink>
             </li>
             <li className="nav-item text-center text-lg-start">

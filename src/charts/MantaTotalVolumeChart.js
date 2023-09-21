@@ -75,7 +75,7 @@ const MantaTotalVolumeChart = (props) => {
 
       var smaData = calculateSMA(compoundVolumes, 30);
       var smaLine = chart.addLineSeries({
-        color: 'rgba(96, 251, 208, 1)',
+        color: colors.teal,
         lineWidth: 2,
       });
       smaLine.setData(smaData);
