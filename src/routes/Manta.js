@@ -1,9 +1,9 @@
-import Pair from "../data/Pair";
-import TickPrecision from "../data/TickPrecision";
+import Pair from "../entities/Pair";
+import TickPrecision from "../entities/TickPrecision";
 import GenericCandleStickChart from "../charts/GenericCandleStickChart";
 import { colors } from "../variables/variables";
 import MantaTotalVolumeChart from "../charts/MantaTotalVolumeChart";
-import tickPrecision from "../data/TickPrecision";
+import tickPrecision from "../entities/TickPrecision";
 import Card from "../components/shared/Card";
 
 import mantaLogoImg from "../assets/tools/logo_manta.png";

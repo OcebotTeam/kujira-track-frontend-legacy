@@ -1,6 +1,6 @@
 import { colors } from "../variables/variables";
 import pairs from "../data/pairs.json";
-import tickPrecision from "../data/TickPrecision";
+import tickPrecision from "../entities/TickPrecision";
 import FinVolumeChart from "../charts/FinSingleVolumeChart";
 import VolumesInfoBar from "../components/volumes/VolumesInfoBar";
 import { useEffect, useState } from "react";

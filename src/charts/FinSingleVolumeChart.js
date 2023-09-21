@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { colors } from "../variables/variables";
 import baseChart from "./BaseChart";
-import Pair from "../data/Pair";
+import Pair from "../entities/Pair";
 
 const VolumeChart = (props) => {
   const { tickerId, precision, period } = props;

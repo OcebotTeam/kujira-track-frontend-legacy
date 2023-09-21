@@ -6,6 +6,7 @@ const BlueMintedUskChart = () => {
 
   const stakedUsk = mintedUsk.then(values => {
     const collaterals = [
+      JSON.parse(JSON.stringify(values.MNTA)),
       JSON.parse(JSON.stringify(values.wstETH)),
       JSON.parse(JSON.stringify(values.LINK)),
       JSON.parse(JSON.stringify(values.INJ)),

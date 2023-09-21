@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { numberWithCommas } from "../../data/Math";
-import Pair from "../../data/Pair";
+import Pair from "../../entities/Pair";
 
 const InfoBar = () => {
   const [transactions, setTransactions] = useState("...");

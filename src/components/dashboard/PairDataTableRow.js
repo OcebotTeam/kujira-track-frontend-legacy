@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Pair from "../../data/Pair";
+import Pair from "../../entities/Pair";
 import { numberWithCommas } from "../../data/Math";
 
 const PairDataTableRow = (props) => {

@@ -1,4 +1,4 @@
-import Pairs from "./pairs.json";
+import Pairs from "../data/pairs.json";
 import TickPrecision from "./TickPrecision";
 
 /**

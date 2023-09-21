@@ -32,6 +32,7 @@ const MintedUskStack = () => {
                     return item;
                 });
             }
+            console.log(CollateralSet)
             return CollateralSet;
         })
         .catch((error) => console.log(error));

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import pairs from "../../data/pairs.json";
-import Pair from "../../data/Pair";
+import Pair from "../../entities/Pair";
 
 const VolumesInfoBar = () => {
   const [lastDayVol, setLastDayVolume] = useState(0);

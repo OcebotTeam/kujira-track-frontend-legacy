@@ -1,5 +1,5 @@
-import Pair from "../data/Pair";
-import TickPrecision from "../data/TickPrecision";
+import Pair from "../entities/Pair";
+import TickPrecision from "../entities/TickPrecision";
 import { Accumulated } from "../data/Accumulated";
 import InfoBar from "../components/dashboard/InfoBar";
 import GenericCandleStickChart from "../charts/GenericCandleStickChart";
@@ -7,7 +7,7 @@ import GenericLineChart from "../charts/GenericLineChart";
 import GenericAreaChart from "../charts/GenericAreaChart";
 import { colors } from "../variables/variables";
 import FinTotalVolumeChart from "../charts/FinTotalVolumeChart";
-import tickPrecision from "../data/TickPrecision";
+import tickPrecision from "../entities/TickPrecision";
 import BlueStakedKujiChart from "../charts/BlueStakedKujiChart";
 import Card from "../components/shared/Card";
 import BlueMintedUskChart from "../charts/BlueMintedUskChart";
