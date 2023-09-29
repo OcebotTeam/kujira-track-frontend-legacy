@@ -81,6 +81,10 @@
         "contract": "kujira1nx5lqc2j4w0ak5dxevj82lar5kunxwj5yamr39xqfazmkksx4f2sksf0hz",
         "nominative": "MNTA_axlUSDC"
     },
+    "yieldETH_MNTA": {
+        "contract": "kujira1sr2hf68nc8a8f2e42tsjf3zmsgjkl4jmctszdzxes0whyk2tzn5sd3avg7",
+        "nominative": "MNTA_axlUSDC"
+    },
     "STRD_MNTA":{
         "contract": "kujira1u2gj9a6p07hse07p66jqnq7xchneecxrq032vl4z2z97ft2r0zeqx4hadf",
         "nominative": "MNTA_axlUSDC"
