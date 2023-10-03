@@ -5,6 +5,8 @@ import { colors } from "../variables/variables";
 import MantaTotalVolumeChart from "../charts/MantaTotalVolumeChart";
 import tickPrecision from "../entities/TickPrecision";
 import Card from "../components/shared/Card";
+import BlueStakedMantaChart from "../charts/BlueStakedMantaChart";
+
 
 import mantaLogoImg from "../assets/tools/logo_manta.png";
 
@@ -46,6 +48,17 @@ const Manta = () => {
           </Card>
         </div>
       </div>
+      <div className="row">
+        <div className={twoColumnColClasses}>
+          <Card
+              title="Staked $MNTA"
+              overTitle="Evolution"
+          >
+            <BlueStakedMantaChart />
+          </Card>
+        </div>
+      </div>
+
 
     </main>
   );

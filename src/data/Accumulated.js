@@ -50,4 +50,16 @@ const StakedTokens = () => {
     .catch((error) => console.log(error));
 };
 
-export {Accumulated, StakedTokens, MintedUsk, MintedUskStack};
+const MantaStaked = () => {
+    const walletsEndpoint = process.env.REACT_APP_API_BRIDGE_URL + "/mantastaked";
+
+    return  fetch(walletsEndpoint)
+        .then((response) => response.json())
+        .then((json) => json.mantastaked.map(item => {
+            item.value /= 1000000;
+            return item;
+        }))
+        .catch((error) => console.log(error));
+};
+
+export {Accumulated, StakedTokens, MintedUsk, MintedUskStack, MantaStaked};
