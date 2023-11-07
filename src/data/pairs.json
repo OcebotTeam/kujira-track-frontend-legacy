@@ -31,6 +31,9 @@
     "WINK_USK": {
         "contract": "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
     },
+    "NSTK_USK": {
+        "contract": "kujira1ggtmfuktfcf6plhtdejyyqn5de5uge3tef0jv64ru68h2ctuvyqs3355mn"
+    },
     "ATOM_USK": {
         "contract": "kujira1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqr2qp2j"
     },
