@@ -53,7 +53,7 @@
         "nominative": "KUJI_axlUSDC"
     },
 
-    "MNTA_USK": {
+       "MNTA_USK": {
         "contract": "kujira1mf4v3x3pkuthha5a4r9jd0slgulcxkucy4weuqsvx2n030twduzqewuznf"
     },
     "MNTA_axlUSDC": {
@@ -120,6 +120,46 @@
     },
     "NTRN_MNTA": {
         "contract": "kujira1hcvm4thkc0mq55cjzttp0fmh6gu5hzrfm4trgwpkm38nmd63tu0qha647q",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "WINK_MNTA": {
+        "contract": "kujira19rmgf792tgl446fnyc4wjdj2t20jlt5t3wudxyuhfy2ccy67g0hsrt73d8",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "WHALE_MNTA": {
+        "contract": "kujira1865zmuchjd0g0xr2q5n6hm747s8xju5k8h6mympk4vmqefkuy3hqc66tcw",
+        "nominative": "MNTA_axlUSDC"
+    },    
+    "UMEE_MNTA": {
+        "contract": "kujira180qesrskvljsvvkhvlkrwvyvu5hx03jhx76lvwxveq86at4ttqxq259wz8",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "TIA_MNTA": {
+        "contract": "kujira1vwr998s2mmvqa0t2tlfayvv5uzsl7t4syxd7a94qdgstfy4720rsa3n9yp",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "wTAO_MNTA": {
+        "contract": "kujira1tgd479qm2cu30yr4568l23aaz0p2wcr979wx3z7wlsgcc5fj6rxshc2uwx",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "whSOL_MNTA": {
+        "contract": "kujira1tdad4e3c6qz6htdha4wg4ta6l86chnpyy22rfm60e6luj4wv2casjsrtj0",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "SCRT_MNTA": {
+        "contract": "kujira1y5k75yuygkr9wmpl3huy5spqktgq9w2ex3zndu0zw6l2n0mzf4asz7hdat",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "NTSK_MNTA": {
+        "contract": "kujira1ff9pnz3ekflj6vkyk2taf4tvvjh4a8fp8hetw3dc59xu8ywl8tmstcf9de",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "ampMNTA_MNTA": {
+        "contract": "kujira1pwldj8n88f99wl5sykff9q7sl2settejutlr84mjysny9wfqgluqcp6fu4",
+        "nominative": "MNTA_axlUSDC"
+    },
+    "wFTM_MNTA": {
+        "contract": "kujira1dsmm4q4kgs0nfsryrmlv7wq2dxp6uzruzqalc5xp30ztlmplgm7qms2qsa",
         "nominative": "MNTA_axlUSDC"
     },
 
