@@ -154,6 +154,10 @@
         "contract": "kujira1ff9pnz3ekflj6vkyk2taf4tvvjh4a8fp8hetw3dc59xu8ywl8tmstcf9de",
         "nominative": "MNTA_axlUSDC"
     },
+    "FUZN_MNTA": {
+        "contract": "kujira1sk09vwsdayqmvl8pmzju0jmrx4rvdlrsv9jqf47tf8ajpj870svs0z4gyd",
+        "nominative": "MNTA_axlUSDC"
+    },
     "ampMNTA_MNTA": {
         "contract": "kujira1pwldj8n88f99wl5sykff9q7sl2settejutlr84mjysny9wfqgluqcp6fu4",
         "nominative": "MNTA_axlUSDC"
@@ -389,5 +393,18 @@
     },
     "SOMM_USK": {
         "contract": "kujira1wckallump2k4284pt5wqg63a8prr205y532ym3850l82k75yzems5mfnkj"
+    },
+    "SAYVE_KUJI": {
+        "contract": "kujira17vegtydr8ktnykpeyfazn9ftutas6l77dmsrw7dp8mmy3kz7gmwqycy5m5",
+        "nominative": "KUJI_axlUSDC"
+    },
+    "TORI_KUJI": {
+        "contract": "kujira15lr6627jahfxgdc53mup86md8jda6xevzsd5nlp39v2fpt3ymv6s70wv2p",
+        "nominative": "KUJI_axlUSDC"
     }
+    ,
+    "RIO_USK": {
+        "contract": "kujira1ymumcne9u6shlnzksqtujgpfj29d20cp7ncg44c2wqzzm9lzmn7q6ed0jh"
+        }
+    
 }
